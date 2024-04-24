@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BINGO.png" />
+    <None Remove="CARTILLA BINGO.png" />
+    <None Remove="TXTWlcm.png" />
+    <None Remove="Wallpaper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BINGO.png" />
+    <Resource Include="CARTILLA BINGO.png" />
+    <Resource Include="TXTWlcm.png" />
+    <Resource Include="Wallpaper.png" />
+  </ItemGroup>
+
+</Project>
