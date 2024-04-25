@@ -15,7 +15,7 @@
                 Content="Generar" 
                 Foreground="Black" 
                 Style="{StaticResource RoundButtonTemplate}" 
-                Margin="77,274,571,228" 
+                Margin="77,198,571,304" 
                 RenderTransformOrigin="0.5,0.5" 
                 Background="#ecab0f" 
                 FontFamily="Franklin Gothic Demi Cond" 
@@ -67,5 +67,6 @@
                  Foreground="White" >
         </TextBox>
         <DockPanel LastChildFill="False"/>
+        <Image Height="80" Margin="662,322,191,213" Width="80" Source="/estrella.png" Stretch="Fill"/>
     </Grid>
 </Window>

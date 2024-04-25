@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexis\\Desktop\\Bingo\\Bingo\\Bingo.csproj": {}
+    "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Bingo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexis\\Desktop\\Bingo\\Bingo\\Bingo.csproj": {
+    "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Bingo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexis\\Desktop\\Bingo\\Bingo\\Bingo.csproj",
+        "projectUniqueName": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Bingo.csproj",
         "projectName": "Bingo",
-        "projectPath": "C:\\Users\\Alexis\\Desktop\\Bingo\\Bingo\\Bingo.csproj",
+        "projectPath": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Bingo.csproj",
         "packagesPath": "C:\\Users\\Alexis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexis\\Desktop\\Bingo\\Bingo\\obj\\",
+        "outputPath": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexis\\AppData\\Roaming\\NuGet\\NuGet.Config",
