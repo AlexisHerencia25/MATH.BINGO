@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Menu" Height="563" Width="1000" WindowStartupLocation="CenterScreen" Background="#c4dafa">
     <Grid>
-        <MediaElement x:Name="BackgroundMusic" Source="Music/When the Moon's Reaching Out Stars.mp3" Volume="0.2"/>
+        <MediaElement x:Name="BackgroundMusic" Source="Music/Let's be Honest.mp3" Volume="0.1" MediaEnded="TerminarCancion"/>
         <Button Style="{StaticResource RoundButtonTemplate}" Margin="233,189,233,114" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>

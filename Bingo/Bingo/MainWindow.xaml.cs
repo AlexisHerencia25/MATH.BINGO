@@ -24,7 +24,7 @@ namespace Bingo
         {
             InitializeComponent();
         }
-        
+
         private void TerminarCancion(object sender, RoutedEventArgs e)
         {
             BackgroundMusic.Position = TimeSpan.Zero;
@@ -39,13 +39,20 @@ namespace Bingo
                 {
                     if (alf != 'C' || num != 3)
                     {
-                        char letraAleatoria = (char)('A' + new Random().Next(26));
+                        int LetraASCII;
+                        if (random.Next(0, 2) == 0)
+                        {
+                            LetraASCII = random.Next(65, 91);
+                        }
+                        else
+                            LetraASCII = random.Next(97, 123);
                         TextBlock textBlock = new TextBlock();
-                        textBlock.FontSize = 35;
+                        textBlock.FontSize = 28;
                         textBlock.HorizontalAlignment = HorizontalAlignment.Center;
                         textBlock.VerticalAlignment = VerticalAlignment.Center;
-                        textBlock.Text = letraAleatoria.ToString();
+                        textBlock.Text = LetraASCII.ToString();
                         textBlock.FontFamily = new FontFamily("Showcard Gothic");
+                        textBlock.Margin = new Thickness(10, 9, 0, 0);
                         WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
                         if (wrapPanel.Children.Count != 0)
                         {

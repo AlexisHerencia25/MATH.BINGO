@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Bingo" Height="600" Width="902" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Opacity="1" >
-        <MediaElement x:Name="BackgroundMusic" Source="Music/Junes.mp3" Volume="0.2" Position="00:00:01" MediaEnded="TerminarCancion"/>
+        <MediaElement x:Name="BackgroundMusic" Source="Music/Junes.mp3" Volume="0.05" Position="00:00:01" MediaEnded="TerminarCancion"/>
         <Image x:Name="IMGWallpaper" RenderTransformOrigin="0.442,0.249" Width="2000" Opacity="0.81" Source="/Wallpaper.png"/>
         <Image x:Name="IMGBONAZO" HorizontalAlignment="Center" Height="509" VerticalAlignment="Center" Width="510" Source="/BINGO.png" Opacity="0.3"/>
         <Image x:Name="IMGWelcome" HorizontalAlignment="Left" Height="42" Margin="20,32,0,0" VerticalAlignment="Top" Width="622"  Stretch="Fill" Source="/TXTWlcm.png"/>
@@ -17,9 +17,9 @@
                 Style="{StaticResource RoundButtonTemplate}" 
                 Margin="77,198,571,304" 
                 RenderTransformOrigin="0.5,0.5" 
-                Background="#ecab0f" 
+                Background="#ecab0f"
                 FontFamily="Franklin Gothic Demi Cond" 
-                FontSize="24" Click="BtnGenerar_Click">
+                FontSize="40" Click="BtnGenerar_Click">
         </Button>
         <WrapPanel x:Name="Panel" Background="#ecab0f" Margin="516,79,45,33" Opacity="0.6" Width="341" />
         <!--FilaA-->
@@ -37,7 +37,9 @@
         <!--FilaC-->
         <WrapPanel x:Name="C1" Background="White" Height="55.7" Width="58.4" Margin="221.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <WrapPanel x:Name="C2" Background="White" Height="55.7" Width="58.4" Margin="346.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="C3" Background="White" Height="55.7" Width="58.4" Margin="471.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <WrapPanel x:Name="C3" Background="White" Height="55.7" Width="58.4" Margin="471.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Width="42" Height="42" Margin="8.4,6.7,0,0" Source="/estrella.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </WrapPanel>
         <WrapPanel x:Name="C4" Background="White" Height="55.7" Width="58.4" Margin="596.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <WrapPanel x:Name="C5" Background="White" Height="55.7" Width="58.4" Margin="721.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <!--FilaD-->
@@ -67,6 +69,5 @@
                  Foreground="White" >
         </TextBox>
         <DockPanel LastChildFill="False"/>
-        <Image Height="80" Margin="662,322,191,213" Width="80" Source="/estrella.png" Stretch="Fill"/>
     </Grid>
 </Window>

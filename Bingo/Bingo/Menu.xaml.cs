@@ -23,5 +23,10 @@ namespace Bingo
         {
             InitializeComponent();
         }
+        private void TerminarCancion(object sender, RoutedEventArgs e)
+        {
+            BackgroundMusic.Position = TimeSpan.Zero;
+            BackgroundMusic.Play();
+        }
     }
 }
