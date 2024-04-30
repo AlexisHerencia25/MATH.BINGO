@@ -17,10 +17,10 @@ namespace Bingo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Jugador : Window
     {
         
-        public MainWindow()
+        public Jugador()
         {
             InitializeComponent();
         }

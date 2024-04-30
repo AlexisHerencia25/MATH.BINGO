@@ -20,20 +20,20 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <MediaElement x:Name="BackgroundMusic" Source="Music/Let's be Honest.mp3" Volume="0.1" MediaEnded="TerminarCancion"/>
+        <MediaElement x:Name="BackgroundMusic" Source="Music/Let's be Honest.mp3" Volume="0.1"/>
         <Button x:Name = "BtnCaller" Style="{StaticResource ThickBorderButtonStyle}"
                 Content="Caller" 
                 Height="120" 
                 Width="300"
                 FontSize="60" FontFamily="Franklin Gothic Demi"
                 Background="#4d82bc"
-                Margin="0,100,575,0"/>
+                Margin="0,100,575,0" Click="BtnCaller_Click"/>
         <Button x:Name = "BtnJugador" Style="{StaticResource ThickBorderButtonStyle}"
                 Content="Jugador" 
                 Height="120" Width="300"
                 FontSize="60" FontFamily="Franklin Gothic Demi"
                 Background="#4d82bc"
-                Margin="575,100,0,0"/>
+                Margin="575,100,0,0" Click="BtnJugador_Click"/>
     </Grid>
     <!--<Window.Resources>
         <Style x:Key="EstiloBoton" TargetType="Button">

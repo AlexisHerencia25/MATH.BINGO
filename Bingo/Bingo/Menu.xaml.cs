@@ -23,10 +23,19 @@ namespace Bingo
         {
             InitializeComponent();
         }
-        private void TerminarCancion(object sender, RoutedEventArgs e)
+
+        private void BtnCaller_Click(object sender, RoutedEventArgs e)
         {
-            BackgroundMusic.Position = TimeSpan.Zero;
-            BackgroundMusic.Play();
+            Caller caller = new Caller();
+            caller.Show();
+            this.Close();
+        }
+
+        private void BtnJugador_Click(object sender, RoutedEventArgs e)
+        {
+            Jugador jugador = new Jugador();
+            jugador.Show();
+            this.Close();
         }
     }
 }
