@@ -11,17 +11,27 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Bingo.Estructura;
 
 namespace Bingo
 {
+    
     /// <summary>
     /// Lógica de interacción para Caller.xaml
     /// </summary>
     public partial class Caller : Window
     {
+        private Controles controles = new Controles();
         public Caller()
         {
             InitializeComponent();
+        }
+
+        private void BtnGenerar_Click(object sender, RoutedEventArgs e)
+        {
+            Random random = new Random();
+            controles.rndN = (TextBox)FindName("TxtRnd");
+            controles.rndN.Text = $"{(char)('A' + random.Next(0, 26))}";
         }
     }
 }

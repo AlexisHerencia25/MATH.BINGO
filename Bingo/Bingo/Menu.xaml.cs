@@ -37,5 +37,11 @@ namespace Bingo
             jugador.Show();
             this.Close();
         }
+
+        private void Encima(object sender, MouseEventArgs e)
+        {
+            Button boton = (Button)this.FindName("BtnCaller");
+            boton.Background = Brushes.Brown;
+        }
     }
 }

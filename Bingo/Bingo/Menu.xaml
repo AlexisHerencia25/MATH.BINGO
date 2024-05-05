@@ -27,7 +27,7 @@
                 Width="300"
                 FontSize="60" FontFamily="Franklin Gothic Demi"
                 Background="#4d82bc"
-                Margin="0,100,575,0" Click="BtnCaller_Click"/>
+                Margin="0,100,575,0" Click="BtnCaller_Click" MouseEnter="Encima"/>
         <Button x:Name = "BtnJugador" Style="{StaticResource ThickBorderButtonStyle}"
                 Content="Jugador" 
                 Height="120" Width="300"

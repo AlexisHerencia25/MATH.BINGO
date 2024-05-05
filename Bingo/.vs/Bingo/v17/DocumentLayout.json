@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|c:\\users\\alexis\\desktop\\math.bingo\\bingo\\bingo\\caller.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|solutionrelative:bingo\\caller.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|c:\\users\\alexis\\desktop\\math.bingo\\bingo\\bingo\\estructura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|solutionrelative:bingo\\estructura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|c:\\users\\alexis\\desktop\\math.bingo\\bingo\\bingo\\jugador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|solutionrelative:bingo\\jugador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|c:\\users\\alexis\\desktop\\math.bingo\\bingo\\bingo\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|solutionrelative:bingo\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|c:\\users\\alexis\\desktop\\math.bingo\\bingo\\bingo\\caller.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{67F82EFF-4B63-4DD8-AA52-AB6709BC6165}|Bingo\\Bingo.csproj|solutionrelative:bingo\\caller.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 268,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Menu.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Menu.xaml.cs",
-              "RelativeDocumentMoniker": "Bingo\\Menu.xaml.cs",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Menu.xaml.cs",
-              "RelativeToolTip": "Bingo\\Menu.xaml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAcwCQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T02:56:38.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Jugador.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Jugador.xaml.cs",
               "RelativeDocumentMoniker": "Bingo\\Jugador.xaml.cs",
               "ToolTip": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Jugador.xaml.cs",
               "RelativeToolTip": "Bingo\\Jugador.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAmwBsAAABGAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAA5wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T02:46:42.444Z",
+              "WhenOpened": "2024-05-05T22:44:12.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Estructura.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Estructura.cs",
+              "RelativeDocumentMoniker": "Bingo\\Estructura.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Estructura.cs",
+              "RelativeToolTip": "Bingo\\Estructura.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwBEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:57:49.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Caller.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Caller.xaml.cs",
+              "RelativeDocumentMoniker": "Bingo\\Caller.xaml.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Caller.xaml.cs",
+              "RelativeToolTip": "Bingo\\Caller.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:37:19.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Caller.xaml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Caller.xaml",
+              "RelativeDocumentMoniker": "Bingo\\Caller.xaml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Caller.xaml",
+              "RelativeToolTip": "Bingo\\Caller.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-03T13:16:02.461Z",
               "EditorCaption": ""
             }
           ]
