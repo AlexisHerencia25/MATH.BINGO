@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="BINGO.png" />
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />

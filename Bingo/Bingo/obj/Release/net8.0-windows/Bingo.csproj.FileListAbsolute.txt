@@ -47,3 +47,12 @@ C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Caller
 C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Jugador.g.cs
 C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Caller.baml
 C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Jugador.baml
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.Asio.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.Core.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.Midi.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.Wasapi.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.WinForms.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\NAudio.WinMM.dll
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Bingo.csproj.AssemblyReference.cache
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Bingo.csproj.Up2Date

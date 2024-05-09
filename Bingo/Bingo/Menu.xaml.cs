@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using NAudio.Wave;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bingo
 {
@@ -19,11 +21,15 @@ namespace Bingo
     /// </summary>
     public partial class Menu : Window
     {
+        public void ReproducirMusica()
+        {
+            NAudio
+        }
         public Menu()
         {
             InitializeComponent();
         }
-
+        //Evento Clicks
         private void BtnCaller_Click(object sender, RoutedEventArgs e)
         {
             Caller caller = new Caller();
@@ -37,11 +43,11 @@ namespace Bingo
             jugador.Show();
             this.Close();
         }
+        //Mouse encima del boton
 
         private void Encima(object sender, MouseEventArgs e)
         {
-            Button boton = (Button)this.FindName("BtnCaller");
-            boton.Background = Brushes.Brown;
+            Metodos.SfxBtn();
         }
     }
 }

@@ -6,55 +6,22 @@
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
         Title="Menu" Height="563" Width="1000" WindowStartupLocation="CenterScreen" Background="#c4dafa">
-    <Window.Resources>
-        <Style TargetType="Button" x:Key="ThickBorderButtonStyle">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border BorderThickness="5" BorderBrush="Black" Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
     <Grid>
-        <MediaElement x:Name="BackgroundMusic" Source="Music/Let's be Honest.mp3" Volume="0.1"/>
-        <Button x:Name = "BtnCaller" Style="{StaticResource ThickBorderButtonStyle}"
+        <Button x:Name = "BtnCaller"
+                BorderBrush="Black" BorderThickness="7,7,7,7"
                 Content="Caller" 
                 Height="120" 
                 Width="300"
                 FontSize="60" FontFamily="Franklin Gothic Demi"
                 Background="#4d82bc"
-                Margin="0,100,575,0" Click="BtnCaller_Click" MouseEnter="Encima"/>
-        <Button x:Name = "BtnJugador" Style="{StaticResource ThickBorderButtonStyle}"
+                Margin="0,0,575,116"
+                Click="BtnCaller_Click" MouseEnter="Encima"/>
+        <Button x:Name = "BtnJugador"
+                BorderBrush="Black" BorderThickness="7,7,7,7"
                 Content="Jugador" 
                 Height="120" Width="300"
                 FontSize="60" FontFamily="Franklin Gothic Demi"
                 Background="#4d82bc"
-                Margin="575,100,0,0" Click="BtnJugador_Click"/>
+                Margin="575,0,0,116" Click="BtnJugador_Click" MouseEnter="Encima"/>
     </Grid>
-    <!--<Window.Resources>
-        <Style x:Key="EstiloBoton" TargetType="Button">
-            <Setter Property="Background" Value="Blue"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="Red"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>-->
 </Window>

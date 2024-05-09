@@ -15,7 +15,7 @@ using System.Reflection.PortableExecutable;
 namespace Bingo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Jugador.xaml
     /// </summary>
     public partial class Jugador : Window
     {
@@ -46,21 +46,24 @@ namespace Bingo
                         }
                         else
                             LetraASCII = random.Next(97, 123);
-                        TextBlock textBlock = new TextBlock();
-                        textBlock.FontSize = 28;
-                        textBlock.HorizontalAlignment = HorizontalAlignment.Center;
-                        textBlock.VerticalAlignment = VerticalAlignment.Center;
-                        textBlock.Text = LetraASCII.ToString();
-                        textBlock.FontFamily = new FontFamily("Showcard Gothic");
-                        textBlock.Margin = new Thickness(10, 9, 0, 0);
+                        TextBox textbox = new TextBox();
+                        textbox.Width = 58.4;
+                        textbox.Height = 55.7;
+                        textbox.FontSize = 28;
+                        textbox.TextAlignment = TextAlignment.Center;
+                        textbox.HorizontalAlignment = HorizontalAlignment.Center;
+                        textbox.VerticalAlignment = VerticalAlignment.Center;
+                        textbox.Text = LetraASCII.ToString();
+                        textbox.FontFamily = new FontFamily("Showcard Gothic");
+                        textbox.Margin = new Thickness(0, 16, 0, 0);
                         WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
                         if (wrapPanel.Children.Count != 0)
                         {
                             wrapPanel.Children.RemoveAt(0);
-                            wrapPanel.Children.Add(textBlock);
+                            wrapPanel.Children.Add(textbox);
                         }
                         else
-                            wrapPanel.Children.Add(textBlock); 
+                            wrapPanel.Children.Add(textbox); 
                     }
                 }
             }
