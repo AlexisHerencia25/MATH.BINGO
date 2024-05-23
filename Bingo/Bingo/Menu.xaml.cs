@@ -23,7 +23,7 @@ namespace Bingo
     {
         public void ReproducirMusica()
         {
-            NAudio
+            
         }
         public Menu()
         {
@@ -44,7 +44,6 @@ namespace Bingo
             this.Close();
         }
         //Mouse encima del boton
-
         private void Encima(object sender, MouseEventArgs e)
         {
             Metodos.SfxBtn();
