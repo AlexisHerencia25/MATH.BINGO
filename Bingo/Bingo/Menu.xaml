@@ -13,13 +13,13 @@
         <Button x:Name = "BtnCaller"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Caller"
-                FontSize="40" FontFamily="Balloonist SF"
+                FontSize="40" FontFamily="Franklin Gothic Demi"
                 Margin="40,151,547,151"
                 Click="BtnCaller_Click" MouseEnter="Encima"/>
         <Button x:Name = "BtnJugador"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Jugador"
-                FontSize="40" FontFamily="Balloonist SF"
+                FontSize="40" FontFamily="Franklin Gothic Demi"
                 
                 Margin="548,151,40,151" Click="BtnJugador_Click" MouseEnter="Encima"/>
     </Grid>

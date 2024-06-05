@@ -13,13 +13,15 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Grid>
-                            <Path x:Name="Nube" Fill="LightSkyBlue" Stroke="Transparent"
-                                  Data="M 0,50
-                                        C 10,0 60,10 100,30
-                                        C 100,30 150,0 190,30
-                                        C 190,30 250,0 270,60
-                                        C 300,60 300,120 250,120
-                                        C 250,120 150,100 190,100
+                            <Path x:Name="Nube" Fill="#1705c6" Stroke="Transparent"
+                                  Data="M 120,100
+                                        l 130,-13
+                                        l -5, 4
+                                        l 40, -4
+                                        l -10, 70
+                                        l -80, 10
+                                        l 10, -5
+                                        l -80, 5
                                   " />
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
@@ -35,6 +37,22 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <!--<Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation
+                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                    To="SkyBlue" Duration="0:0:0.5"/>
+                                <ColorAnimation
+                                    Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                    To="White" Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>-->
         </Style>
     </Application.Resources>
 </Application>
