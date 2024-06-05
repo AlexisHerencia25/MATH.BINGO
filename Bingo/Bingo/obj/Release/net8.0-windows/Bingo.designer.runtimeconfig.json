@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Alexis\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Alexis\\.nuget\\packages"
+      "C:\\Users\\ALEXIS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ALEXIS\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,

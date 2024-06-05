@@ -5,23 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Menu" Height="563" Width="1000" WindowStartupLocation="CenterScreen" Background="#c4dafa">
-    <Grid>
+        Title="Menu" Height="563" Width="1000" 
+        WindowStartupLocation="CenterScreen"
+        Background="#c4dafa"
+        ResizeMode="NoResize">
+    <Grid ShowGridLines="True">
         <Button x:Name = "BtnCaller"
-                BorderBrush="Black" BorderThickness="7,7,7,7"
-                Content="Caller" 
-                Height="120" 
-                Width="300"
-                FontSize="60" FontFamily="Franklin Gothic Demi"
-                Background="#4d82bc"
-                Margin="0,0,575,116"
+                Style="{StaticResource BotonPersonalizado}"
+                Content="Caller"
+                FontSize="40" FontFamily="Balloonist SF"
+                Margin="40,151,547,151"
                 Click="BtnCaller_Click" MouseEnter="Encima"/>
         <Button x:Name = "BtnJugador"
-                BorderBrush="Black" BorderThickness="7,7,7,7"
-                Content="Jugador" 
-                Height="120" Width="300"
-                FontSize="60" FontFamily="Franklin Gothic Demi"
-                Background="#4d82bc"
-                Margin="575,0,0,116" Click="BtnJugador_Click" MouseEnter="Encima"/>
+                Style="{StaticResource BotonPersonalizado}"
+                Content="Jugador"
+                FontSize="40" FontFamily="Balloonist SF"
+                
+                Margin="548,151,40,151" Click="BtnJugador_Click" MouseEnter="Encima"/>
     </Grid>
 </Window>

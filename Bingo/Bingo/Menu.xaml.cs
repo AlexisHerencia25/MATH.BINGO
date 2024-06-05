@@ -33,14 +33,14 @@ namespace Bingo
         {
             Caller caller = new Caller();
             caller.Show();
-            this.Close();
+            
         }
 
         private void BtnJugador_Click(object sender, RoutedEventArgs e)
         {
             Jugador jugador = new Jugador();
             jugador.Show();
-            this.Close();
+            
         }
         //Mouse encima del boton
         private void Encima(object sender, MouseEventArgs e)
