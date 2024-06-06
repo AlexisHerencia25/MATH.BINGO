@@ -23,19 +23,14 @@ namespace Bingo
         public Jugador()
         {
             InitializeComponent();
-        }
-
-        private void TerminarCancion(object sender, RoutedEventArgs e)
-        {
-            BackgroundMusic.Position = TimeSpan.Zero;
-            BackgroundMusic.Play();
+            Metodos.SFXIntro();
         }
         private void BtnGenerar_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            foreach (char alf in new char[5] {'A', 'B', 'C', 'D', 'E'})
+            foreach (char alf in new char[4] {'A', 'B', 'C', 'D'})
             {
-                foreach (int num in new int[5] {1, 2, 3, 4, 5})
+                foreach (int num in new int[4] {1, 2, 3, 4})
                 {
                     if (alf != 'C' || num != 3)
                     {
@@ -48,7 +43,7 @@ namespace Bingo
                             LetraASCII = random.Next(97, 123);
                         TextBox textbox = new TextBox();
                         textbox.Width = 58.4;
-                        textbox.Height = 55.7;
+                        textbox.Height = 60.7;
                         textbox.FontSize = 28;
                         textbox.TextAlignment = TextAlignment.Center;
                         textbox.HorizontalAlignment = HorizontalAlignment.Center;

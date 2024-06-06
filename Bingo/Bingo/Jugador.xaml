@@ -5,57 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Bingo" Height="600" Width="902" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Opacity="1" >
-        <MediaElement x:Name="BackgroundMusic" Source="Music/Junes.mp3" Volume="0.05" Position="00:00:01" MediaEnded="TerminarCancion"/>
+        Title="Bingo" AllowsTransparency="True" Background="Transparent"  Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Grid>
         <Image x:Name="IMGWallpaper" RenderTransformOrigin="0.442,0.249" Width="2000" Opacity="0.81" Source="/Wallpaper.png"/>
-        <Image x:Name="IMGBONAZO" HorizontalAlignment="Center" Height="509" VerticalAlignment="Center" Width="510" Source="/BINGO.png" Opacity="0.3"/>
+        <Image x:Name="IMGBONAZO" HorizontalAlignment="Center" Height="826" VerticalAlignment="Top" Width="828" Source="/BINGO.png" Opacity="0.3" Margin="0,158,0,0"/>
         <Image x:Name="IMGWelcome" HorizontalAlignment="Left" Height="42" Margin="20,32,0,0" VerticalAlignment="Top" Width="622"  Stretch="Fill" Source="/TXTWlcm.png"/>
         <Button x:Name="BtnGenerar" 
                 Content="Generar" 
                 Foreground="Black" 
                 BorderBrush="Yellow"
                 BorderThickness="3,3,3,3"
-                Margin="77,198,571,304" 
+                Margin="77,366,1278,304" 
                 RenderTransformOrigin="0.5,0.5" 
                 Background="#ecab0f"
                 FontFamily="Franklin Gothic Demi Cond" 
                 FontSize="40" Click="BtnGenerar_Click">
         </Button>
-        <WrapPanel x:Name="Panel" Background="#ecab0f" Margin="516,79,103,128" Opacity="0.6" />
+        <WrapPanel x:Name="Panel" Background="#ecab0f" Margin="1293,79,103,128" Opacity="0.6" />
         <!--FilaA-->
-        <WrapPanel x:Name="A1" Background="White" Height="55.7" Width="58.4" Margin="221.9,-132.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="A2" Background="White" Height="55.7" Width="58.4" Margin="346.9,-132.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="A3" Background="White" Height="55.7" Width="58.4" Margin="471.9,-132.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="A4" Background="White" Height="55.7" Width="58.4" Margin="596.9,-132.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <WrapPanel x:Name="A1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,418,0,0"/>
+        <WrapPanel x:Name="A2" Background="White" Height="56" Width="59" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,418,0,0"/>
+        <WrapPanel x:Name="A3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,418,0,0"/>
+        <WrapPanel x:Name="A4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,418,0,0"/>
         <!--FilaB-->
-        <WrapPanel x:Name="B1" Background="White" Height="55.7" Width="58.4" Margin="221.9,-13.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="B2" Background="White" Height="55.7" Width="58.4" Margin="346.9,-13.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="B3" Background="White" Height="55.7" Width="58.4" Margin="471.9,-13.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="B4" Background="White" Height="55.7" Width="58.4" Margin="596.9,-13.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <WrapPanel x:Name="B1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,566,0,0"/>
+        <WrapPanel x:Name="B2" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,566,0,0"/>
+        <WrapPanel x:Name="B3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,566,0,0"/>
+        <WrapPanel x:Name="B4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,566,0,0"/>
         <!--FilaC-->
-        <WrapPanel x:Name="C1" Background="White" Height="55.7" Width="58.4" Margin="221.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="C2" Background="White" Height="55.7" Width="58.4" Margin="346.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="C3" Background="White" Height="55.7" Width="58.4" Margin="471.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="C4" Background="White" Height="55.7" Width="58.4" Margin="596.9,108.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <WrapPanel x:Name="C1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,720,0,0"/>
+        <WrapPanel x:Name="C2" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,720,0,0"/>
+        <WrapPanel x:Name="C3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,720,0,0"/>
+        <WrapPanel x:Name="C4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,720,0,0"/>
         <!--FilaD-->
-        <WrapPanel x:Name="D1" Background="White" Height="55.7" Width="58.4" Margin="221.9,229.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="D2" Background="White" Height="55.7" Width="58.4" Margin="346.9,229.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="D3" Background="White" Height="55.7" Width="58.4" Margin="471.9,229.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <WrapPanel x:Name="D4" Background="White" Height="55.7" Width="58.4" Margin="596.9,229.8,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <WrapPanel x:Name="D1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,866,0,0"/>
+        <WrapPanel x:Name="D2" Background="White" Height="55" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,866,0,0"/>
+        <WrapPanel x:Name="D3" Background="White" Height="56" Width="59" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,865,0,0"/>
+        <WrapPanel x:Name="D4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,865,0,0"/>
         <TextBox x:Name="TXTbingo"
                  HorizontalAlignment="Left" 
-                 Margin="538,96,0,0" 
+                 Margin="1315,96,0,0" 
                  TextWrapping="Wrap" 
                  Text="BINGO" 
                  VerticalAlignment="Top"
-                 Width="240" 
+                 Width="480" 
                  TextAlignment="Center" 
                  FontFamily="AngryBirds" 
                  Background="Transparent" 
                  BorderBrush="Transparent" 
-                 FontSize="72" 
-                 Foreground="White" >
+                 FontSize="180" 
+                 Foreground="White" Height="200" >
         </TextBox>
         <DockPanel LastChildFill="False"/>
     </Grid>

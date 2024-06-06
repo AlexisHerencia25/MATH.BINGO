@@ -25,6 +25,7 @@ namespace Bingo
         public Caller()
         {
             InitializeComponent();
+            Metodos.SFXIntro();
         }
 
         private void BtnGenerar_Click(object sender, RoutedEventArgs e)
@@ -39,6 +40,11 @@ namespace Bingo
                 TxtRnd.Text += numero % 2;
                 numero /= 2;
             }
+        }
+
+        private void BtnGenerar_Encima(object sender, MouseEventArgs e)
+        {
+            Metodos.SfxBtn();
         }
     }
 }

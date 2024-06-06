@@ -14,6 +14,12 @@ namespace Bingo
 {
     public class Metodos : Window
     {
+        public static void SFXIntro()
+        {
+            SoundPlayer intro = new SoundPlayer();
+            intro.SoundLocation = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\SFX\\intro.wav";
+            intro.Load(); intro.Play();
+        }
         public static void MusicaDeFondo()
         {
             TimeSpan terminar = new TimeSpan(0, 0, 0, 9, 92);
@@ -25,7 +31,7 @@ namespace Bingo
         public static void SfxBtn()
         {
             SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\SFX\\Slide.wav";
+            soundPlayer.SoundLocation = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\SFX\\over.wav";
             soundPlayer.Load(); soundPlayer.Play();
         }
     }

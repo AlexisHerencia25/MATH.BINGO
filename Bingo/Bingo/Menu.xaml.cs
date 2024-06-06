@@ -22,9 +22,8 @@ namespace Bingo
     /// </summary>
     public partial class Menu : Window
     {
-        public void ReproducirMusica()
-        {
-        }
+        
+        
         public Menu()
         {
             InitializeComponent();
