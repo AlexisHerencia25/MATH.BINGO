@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Caller" Height="450" Width="800">
+        Title="Caller" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <WrapPanel Background="#c4dafa"/>
-        <Button x:Name="BtnGenerar" 
+        <WrapPanel Background="#c4dafa">
+            <Label x:Name="XD" Content="Label" Margin="300,200"/>
+        </WrapPanel>
+        <Button x:Name="BtnGenerar"
+                Style="{StaticResource BotonPersonalizado}"
                 Content="Generar" 
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 BorderBrush="Black"
                 BorderThickness="5,5,5,5"
-                Width="240"
-                Height="100"
-                FontSize="40"
-                VerticalAlignment="Center" Margin="0,0,0,-275" Click="BtnGenerar_Click"/>
+                Width="401"
+                Height="236"
+                FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                VerticalAlignment="Top" Click="BtnGenerar_Click" Margin="214,217,0,0"/>
         <TextBox x:Name="TxtRnd"
                  BorderBrush="Black"
                  BorderThickness="5, 5, 5, 5"
@@ -26,10 +29,10 @@
                  IsReadOnly="True"
                  TextAlignment="Center"
                  FontSize="80"
-                 VerticalAlignment="Center" 
-                 Width="140"
+                 VerticalAlignment="Top" 
+                 Width="506"
                  Height="120" 
-                 Margin="0,0,0,60"
+                 Margin="0,127,0,0"
                  />
 
     </Grid>

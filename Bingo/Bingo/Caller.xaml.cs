@@ -30,8 +30,15 @@ namespace Bingo
         private void BtnGenerar_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            controles.rndN = (TextBox)FindName("TxtRnd");
-            controles.rndN.Text = $"{(char)('A' + random.Next(0, 26))}";
+            //controles.rndN = (TextBox)FindName("TxtRnd");
+            //controles.rndN.Text = $"{random.Next(65, 91)}";
+            int numero = random.Next(65, 91);
+            TxtRnd.Text = "";
+            while (numero > 0)
+            {
+                TxtRnd.Text += numero % 2;
+                numero /= 2;
+            }
         }
     }
 }

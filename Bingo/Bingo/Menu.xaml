@@ -10,17 +10,71 @@
         Background="#c4dafa"
         ResizeMode="NoResize">
     <Grid ShowGridLines="True">
+        <Polygon Points="700,0 1000,0 1000,200"
+                 Fill="#5995dd"/>
+        <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9"/>
+        <Ellipse HorizontalAlignment="Left" Height="399" Margin="-115,-59,0,0" Fill="#2878f1" VerticalAlignment="Top" Width="546"/>
+        <Ellipse HorizontalAlignment="Left" Height="357" Margin="-115,-63,0,0" Fill="#e7ca5d" VerticalAlignment="Top" Width="515" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.412"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Image HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="300" Stretch="Fill" Source="/bingomenu.png" Margin="20,12,0,0"/>
+        <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" Margin="1027,284,0,0" VerticalAlignment="Top" Width="250" Stretch="Fill" Source="/zero.png"/>
+        <TextBlock x:Name="displayTextCaller" 
+                   TextWrapping="Wrap" TextAlignment="Justify"
+                   VerticalAlignment="Top" Margin="86,241,633,0" 
+                   FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="99" FontSize="25"
+                   Opacity="0">
+            Serás dirigido a una ventana que cree numeros binarios de forma aleatoria
+        </TextBlock>
         <Button x:Name = "BtnCaller"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Caller"
-                FontSize="40" FontFamily="Franklin Gothic Demi"
-                Margin="40,151,547,151"
-                Click="BtnCaller_Click" MouseEnter="Encima"/>
+                FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                Margin="40,140,569,151"
+                Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar">
+
+        </Button>
+        <TextBlock x:Name="displayTextJugador" 
+           TextWrapping="Wrap" TextAlignment="Justify"
+           VerticalAlignment="Top" Margin="560,219,42,0" 
+           FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="145" FontSize="25"
+           Opacity="0">
+           Serás dirigido a una ventana en donde en una cartilla se generará letras y tendras que tachar cada una que mencione el caller mediante el procedimiento
+        </TextBlock>
         <Button x:Name = "BtnJugador"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Jugador"
-                FontSize="40" FontFamily="Franklin Gothic Demi"
-                
-                Margin="548,151,40,151" Click="BtnJugador_Click" MouseEnter="Encima"/>
+                FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                Margin="560,134,42,145" Click="BtnJugador_Click" MouseEnter="EncimaJugador" MouseLeave="DejarJugador"/>
     </Grid>
+    <Window.Resources>
+        <!--Animacion informacion (Jugador)-->
+        <Storyboard x:Key="CallerDeslizarAbajo">
+            <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,341,633,0" Duration="0:0:0.3"/>
+        </Storyboard>
+        <Storyboard x:Key="CallerDeslizarArriba">
+            <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,241,633,0" Duration="0:0:0.3"/>
+        </Storyboard>
+        <!--Animacion informacion (Jugador)-->
+        <Storyboard x:Key="JugadorDeslizarAbajo">
+            <DoubleAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Margin" To="560,319,42,0" Duration="0:0:0.3"/>
+        </Storyboard>
+        <Storyboard x:Key="JugadorDeslizarArriba">
+            <DoubleAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Margin" To="560,219,42,0" Duration="0:0:0.3"/>
+        </Storyboard>
+        <Storyboard x:Key="BFX">
+            <ThicknessAnimation Storyboard.TargetName="Zero" Storyboard.TargetProperty="Margin" To="-365,284,0,0" Duration="0:0:30"/>
+        </Storyboard>
+    </Window.Resources>
 </Window>

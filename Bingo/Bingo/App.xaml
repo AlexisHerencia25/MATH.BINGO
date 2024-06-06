@@ -14,14 +14,14 @@
                     <ControlTemplate TargetType="Button">
                         <Grid>
                             <Path x:Name="Nube" Fill="#1705c6" Stroke="Transparent"
-                                  Data="M 120,100
+                                  Data="M 90,80
                                         l 130,-13
                                         l -5, 4
-                                        l 40, -4
-                                        l -10, 70
-                                        l -80, 10
-                                        l 10, -5
-                                        l -80, 5
+                                        l 90, -4
+                                        l -10, 100
+                                        l -100, 10
+                                        l 10, -10
+                                        l -120, 4
                                   " />
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
@@ -37,22 +37,31 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <!--<Style.Triggers>
+            <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Trigger.EnterActions>
                         <BeginStoryboard>
                             <Storyboard>
-                                <ColorAnimation
-                                    Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
-                                    To="SkyBlue" Duration="0:0:0.5"/>
-                                <ColorAnimation
-                                    Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
-                                    To="White" Duration="0:0:0.5"/>
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="FontSize"
+                                    To="50"
+                                    Duration="0:0:0.1"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="FontSize"
+                                    To="40"
+                                    Duration="0:0:0.1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
                 </Trigger>
-            </Style.Triggers>-->
+            </Style.Triggers>
         </Style>
+        <Style x:Key="SExo"/>
     </Application.Resources>
 </Application>

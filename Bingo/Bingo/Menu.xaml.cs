@@ -13,6 +13,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 
 namespace Bingo
 {
@@ -27,25 +28,52 @@ namespace Bingo
         public Menu()
         {
             InitializeComponent();
+            AnimacionBFX();
+        }
+        private void AnimacionBFX()
+        {
+            Storyboard zero = (Storyboard)FindResource("BFX");
+            zero.Begin();
         }
         //Evento Clicks
         private void BtnCaller_Click(object sender, RoutedEventArgs e)
         {
             Caller caller = new Caller();
-            caller.Show();
+            caller.ShowDialog();
             
         }
 
         private void BtnJugador_Click(object sender, RoutedEventArgs e)
         {
             Jugador jugador = new Jugador();
-            jugador.Show();
+            jugador.ShowDialog();
             
         }
         //Mouse encima del boton
         private void Encima(object sender, MouseEventArgs e)
         {
+            Storyboard deslizarinfo = (Storyboard)FindResource("CallerDeslizarAbajo");
+            deslizarinfo.Begin();
             Metodos.SfxBtn();
+        }
+
+        private void Dejar(object sender, MouseEventArgs e)
+        {
+            Storyboard sb = (Storyboard)FindResource("CallerDeslizarArriba");
+            sb.Begin();
+        }
+
+        private void EncimaJugador(object sender, MouseEventArgs e)
+        {
+            Storyboard deslizarinfo = (Storyboard)FindResource("JugadorDeslizarAbajo");
+            deslizarinfo.Begin();
+            Metodos.SfxBtn();
+        }
+
+        private void DejarJugador(object sender, MouseEventArgs e)
+        {
+            Storyboard deslizarinfo = (Storyboard)FindResource("JugadorDeslizarArriba");
+            deslizarinfo.Begin();
         }
     }
 }

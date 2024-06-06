@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="BINGO.png" />
+    <None Remove="bingomenu.png" />
     <None Remove="CARTILLA BINGO.png" />
     <None Remove="estrella.png" />
     <None Remove="TXTWlcm.png" />
     <None Remove="Wallpaper.png" />
+    <None Remove="zero.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,10 +24,12 @@
 
   <ItemGroup>
     <Resource Include="BINGO.png" />
+    <Resource Include="bingomenu.png" />
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />
     <Resource Include="TXTWlcm.png" />
     <Resource Include="Wallpaper.png" />
+    <Resource Include="zero.png" />
   </ItemGroup>
 
 </Project>
