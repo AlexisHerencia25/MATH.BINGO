@@ -8,7 +8,7 @@
         Title="Menu" Height="563" Width="1000" 
         WindowStartupLocation="CenterScreen"
         Background="#c4dafa"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowState="Normal">
     <Grid>
         <MediaElement Name="BackgroundMusic" Source="Music/Wall Market.mp3" Volume="0.3" Grid.ColumnSpan="2"/>
         <Polygon Points="700,0 1000,0 1000,200"
@@ -29,7 +29,7 @@
         <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" Margin="1062,284,0,0" VerticalAlignment="Top" Width="250" Stretch="Fill" Source="/zero.png" Grid.Column="1"/>
         <TextBlock x:Name="displayTextCaller" 
                    TextWrapping="Wrap" TextAlignment="Justify"
-                   VerticalAlignment="Top" Margin="86,241,633,0" 
+                   VerticalAlignment="Top" Margin="86,241,569,0" 
                    FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="99" FontSize="25"
                    Opacity="0">
             Serás dirigido a una ventana que cree numeros binarios de forma aleatoria
@@ -37,33 +37,32 @@
         <Button x:Name = "BtnCaller"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Caller"
-                FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                FontSize="40" FontFamily="Segoe UI Black"
                 Margin="40,140,569,151"
                 Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar">
-
         </Button>
         <TextBlock x:Name="displayTextJugador" 
            TextWrapping="Wrap" TextAlignment="Justify"
            VerticalAlignment="Top" Margin="560,219,42,0" 
-           FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="145" FontSize="25"
+           FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="145" FontSize="20"
            Opacity="0" Grid.ColumnSpan="2">
            Serás dirigido a una ventana en donde en una cartilla se generará letras y tendras que tachar cada una que mencione el caller mediante el procedimiento
         </TextBlock>
         <Button x:Name = "BtnJugador"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Jugador"
-                FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                FontSize="40" FontFamily="Segoe UI Black"
                 Margin="560,134,42,145" Click="BtnJugador_Click" MouseEnter="EncimaJugador" MouseLeave="DejarJugador" Grid.ColumnSpan="2"/>
     </Grid>
     <Window.Resources>
         <!--Animacion informacion (Jugador)-->
         <Storyboard x:Key="CallerDeslizarAbajo">
             <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,341,633,0" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,341,569,0" Duration="0:0:0.3"/>
         </Storyboard>
         <Storyboard x:Key="CallerDeslizarArriba">
             <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,241,633,0" Duration="0:0:0.3"/>
+            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,241,569,0" Duration="0:0:0.3"/>
         </Storyboard>
         <!--Animacion informacion (Jugador)-->
         <Storyboard x:Key="JugadorDeslizarAbajo">

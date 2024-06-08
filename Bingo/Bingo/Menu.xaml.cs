@@ -28,6 +28,8 @@ namespace Bingo
         {
             InitializeComponent();
             AnimacionBFX();
+            this.Width = 1000;
+            this.Height = 563;
         }
         private void AnimacionBFX()
         {

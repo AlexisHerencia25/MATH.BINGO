@@ -32,5 +32,8 @@
                  Height="120" 
                  Margin="0,127,0,0"
                  />
+        <Image HorizontalAlignment="Left" 
+               Height="162" Width="156" 
+               Margin="656,85,0,0" VerticalAlignment="Top" Source="/bubble_1.png" Stretch="Fill"/>
     </Grid>
 </Window>
