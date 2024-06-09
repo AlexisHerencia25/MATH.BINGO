@@ -12,6 +12,8 @@
     <None Remove="BINGO.png" />
     <None Remove="bingomenu.png" />
     <None Remove="bubble_1.png" />
+    <None Remove="bubble_14.png" />
+    <None Remove="bubble_18.png" />
     <None Remove="CARTILLA BINGO.png" />
     <None Remove="estrella.png" />
     <None Remove="pngwing.com.png" />
@@ -28,6 +30,8 @@
     <Resource Include="BINGO.png" />
     <Resource Include="bingomenu.png" />
     <Resource Include="bubble_1.png" />
+    <Resource Include="bubble_14.png" />
+    <Resource Include="bubble_18.png" />
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />
     <Resource Include="pngwing.com.png" />

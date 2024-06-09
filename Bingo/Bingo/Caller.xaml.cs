@@ -40,6 +40,7 @@ namespace Bingo
                 TxtRnd.Text += numero % 2;
                 numero /= 2;
             }
+            Metodos.SfxTxt();
         }
 
         private void BtnGenerar_Encima(object sender, MouseEventArgs e)
