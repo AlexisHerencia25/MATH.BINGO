@@ -47,5 +47,39 @@ namespace Bingo
         {
             Metodos.SfxBtn();
         }
+
+        private void BtnAlfGenerar_Click(object sender, RoutedEventArgs e)
+        {
+            Metodos.SfxTxt();
+            Random random = new Random();
+            foreach (char alf in new char[4] { 'A', 'B', 'C', 'D' })
+            {
+                foreach (int num in new int[4] { 1, 2, 3, 4 })
+                {
+                    int Letra;
+                    Letra = random.Next(0, 26);
+                    TextBox textbox = new TextBox();
+                    textbox.Width = 58.4;
+                    textbox.Height = 60.7;
+                    textbox.IsReadOnly = true;
+                    textbox.BorderThickness = new Thickness(0);
+                    textbox.FontSize = 38;
+                    textbox.TextAlignment = TextAlignment.Center;
+                    textbox.HorizontalAlignment = HorizontalAlignment.Center;
+                    textbox.VerticalAlignment = VerticalAlignment.Center;
+                    textbox.Text = $"{(char)('A' + Letra)}";
+                    textbox.FontFamily = new FontFamily("Cassia");
+                    textbox.Margin = new Thickness(12, 15, 0, 0);
+                    WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
+                    if (wrapPanel.Children.Count != 0)
+                    {
+                        wrapPanel.Children.RemoveAt(0);
+                        wrapPanel.Children.Add(textbox);
+                    }
+                    else
+                        wrapPanel.Children.Add(textbox);
+                }
+            }
+        }
     }
 }

@@ -9,7 +9,6 @@
     <Grid>
         <Image x:Name="IMGWallpaper" RenderTransformOrigin="0.442,0.249" Width="2000" Opacity="0.81" Source="/Wallpaper.png"/>
         <Image x:Name="IMGBONAZO" HorizontalAlignment="Center" Height="826" VerticalAlignment="Top" Width="828" Source="/BINGO.png" Opacity="0.3" Margin="0,158,0,0"/>
-        <Image x:Name="IMGWelcome" HorizontalAlignment="Left" Height="42" Margin="20,32,0,0" VerticalAlignment="Top" Width="622"  Stretch="Fill" Source="/TXTWlcm.png"/>
         <Button x:Name="BtnGenerar" 
                 Content="Generar" 
                 Foreground="Black" 

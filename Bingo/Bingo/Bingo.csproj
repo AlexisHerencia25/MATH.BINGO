@@ -15,10 +15,12 @@
     <None Remove="bubble_1.png" />
     <None Remove="bubble_14.png" />
     <None Remove="bubble_18.png" />
+    <None Remove="Caller.png" />
     <None Remove="CARTILLA BINGO.png" />
     <None Remove="estrella.png" />
     <None Remove="pngwing.com.png" />
     <None Remove="TXTWlcm.png" />
+    <None Remove="Usuario.png" />
     <None Remove="Wallpaper.png" />
     <None Remove="zero.png" />
   </ItemGroup>
@@ -34,10 +36,12 @@
     <Resource Include="bubble_1.png" />
     <Resource Include="bubble_14.png" />
     <Resource Include="bubble_18.png" />
+    <Resource Include="Caller.png" />
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />
     <Resource Include="pngwing.com.png" />
     <Resource Include="TXTWlcm.png" />
+    <Resource Include="Usuario.png" />
     <Resource Include="Wallpaper.png" />
     <Resource Include="zero.png" />
   </ItemGroup>
