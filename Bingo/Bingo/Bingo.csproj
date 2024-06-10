@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="BINGO.png" />
     <None Remove="bingomenu.png" />
+    <None Remove="BINGOtxt.png" />
     <None Remove="bubble_1.png" />
     <None Remove="bubble_14.png" />
     <None Remove="bubble_18.png" />
@@ -29,6 +30,7 @@
   <ItemGroup>
     <Resource Include="BINGO.png" />
     <Resource Include="bingomenu.png" />
+    <Resource Include="BINGOtxt.png" />
     <Resource Include="bubble_1.png" />
     <Resource Include="bubble_14.png" />
     <Resource Include="bubble_18.png" />

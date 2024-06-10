@@ -8,8 +8,8 @@
         Background="Transparent"
         AllowsTransparency="True"
         Title="Caller" Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
-    <Canvas>
-        <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-2563" Canvas.Top="-664" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.8">
+    <Canvas Margin="0,0,0,0">
+        <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-2563" Canvas.Top="-664" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="1">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,7 +33,7 @@
                 </EventTrigger>
             </Rectangle.Triggers>
         </Rectangle>
-        <Rectangle x:Name="Font2" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#09269b" Canvas.Left="2089" Canvas.Top="436" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.8">
+        <Rectangle x:Name="Font2" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#09269b" Canvas.Left="2089" Canvas.Top="436" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="1">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -57,29 +57,49 @@
                 </EventTrigger>
             </Rectangle.Triggers>
         </Rectangle>
-        <Button x:Name="BtnGenerar"
-                Content="Generar" 
-                HorizontalAlignment="Left"
-                BorderBrush="Black"
-                BorderThickness="5,5,5,5"
-                Width="628"
-                Height="432"
-                FontSize="40" FontFamily="Arista Pro Alternate Fat"
-                VerticalAlignment="Top" Click="BtnGenerar_Click" MouseEnter="BtnGenerar_Encima" Canvas.Left="673" Canvas.Top="504"/>
-        <TextBox x:Name="TxtRnd"
-                 BorderBrush="Black"
-                 BorderThickness="5, 5, 5, 5"
-                 HorizontalAlignment="Left" 
-                 TextWrapping="Wrap" 
-                 Text=""
-                 IsReadOnly="True"
-                 TextAlignment="Center"
-                 FontSize="80"
-                 VerticalAlignment="Top" 
-                 Width="506"
-                 Height="120" 
-                 Margin="734,127,0,0"
-                 />
+        <Image x:Name="BingoBkgrnd" Height="1024" Canvas.Left="425" Canvas.Top="79" Width="1024" Source="/BINGO.png" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Opacity="0.4">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                     From="0" To="0.7"
+                                     Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Button x:Name="BtnGenerar" Content="Generar" BorderBrush="Black" BorderThickness="5,5,5,5"
+                Height="252" FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                VerticalAlignment="Bottom" Click="BtnGenerar_Click" MouseEnter="BtnGenerar_Encima" 
+                Canvas.Left="203" Canvas.Top="726" HorizontalAlignment="Left"
+                Width="424"/>
+        <TextBox x:Name="TxtRnd" BorderBrush="Black" BorderThickness="5, 5, 5, 5" HorizontalAlignment="Left" 
+                 TextWrapping="Wrap" Text="" IsReadOnly="True" TextAlignment="Center" FontSize="40"
+                 VerticalAlignment="Center" Width="258" Height="66" Canvas.Left="286" Canvas.Top="591"/>
+        <WrapPanel x:Name="Panel" Background="#ecab0f" Margin="1293,79,103,128" Opacity="0.6" />
+        <!--FilaA-->
+        <WrapPanel x:Name="A1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="79"/>
+        <WrapPanel x:Name="A2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1408" Canvas.Top="79"/>
+        <WrapPanel x:Name="A3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1526" Canvas.Top="79"/>
+        <WrapPanel x:Name="A4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1643" Canvas.Top="79"/>
+        <!--FilaB-->
+        <WrapPanel x:Name="B1" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="1293" Canvas.Top="189"/>
+        <WrapPanel x:Name="B2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1408" Canvas.Top="189"/>
+        <WrapPanel x:Name="B3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1526" Canvas.Top="189"/>
+        <WrapPanel x:Name="B4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1643" Canvas.Top="189"/>
+        <!--FilaC-->
+        <WrapPanel x:Name="C1" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="302"/>
+        <WrapPanel x:Name="C2" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1408" Canvas.Top="302"/>
+        <WrapPanel x:Name="C3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1526" Canvas.Top="302"/>
+        <WrapPanel x:Name="C4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1643" Canvas.Top="302"/>
+        <!--FilaD-->
+        <WrapPanel x:Name="D1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="410"/>
+        <WrapPanel x:Name="D2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1408" Canvas.Top="410"/>
+        <WrapPanel x:Name="D3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1526" Canvas.Top="410"/>
+        <WrapPanel x:Name="D4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1643" Canvas.Top="410"/>
+        <DockPanel LastChildFill="False"/>
         <Image x:Name="burbuja1" HorizontalAlignment="Left" 
                Height="162" Width="156" 
                Margin="1549,-245,0,0" VerticalAlignment="Top" Source="/bubble_1.png" Stretch="Fill" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
@@ -118,6 +138,5 @@
             </Image.Triggers>
         </Image>
         <Image x:Name="burbuja14" HorizontalAlignment="Center" Height="106" Margin="0,-150,0,0" VerticalAlignment="Top" Width="150" Source="/bubble_14.png" Stretch="Fill"/>
-        
     </Canvas>
 </Window>
