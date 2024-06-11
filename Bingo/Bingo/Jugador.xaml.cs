@@ -19,49 +19,20 @@ namespace Bingo
     /// </summary>
     public partial class Jugador : Window
     {
-        
+        private string[] Pequeñas_Oraciones = { "El perro ladró fuerte", 
+                                                "La ventana se rompió", 
+                                                "Comimos pizza ayer", 
+                                                "El coche es rojo", 
+                                                "Llueve en la ciudad",
+                                                "Las flores son bonitas",
+                                                "El niño juega afuera",
+                                                "La luna está llena",
+                                                "El gato duerme mucho",
+                                                "La pelota rebotó lejos"};
         public Jugador()
         {
             InitializeComponent();
             Metodos.SFXIntro();
-        }
-        private void BtnGenerar_Click(object sender, RoutedEventArgs e)
-        {
-            Random random = new Random();
-            foreach (char alf in new char[4] {'A', 'B', 'C', 'D'})
-            {
-                foreach (int num in new int[4] {1, 2, 3, 4})
-                {
-                    if (alf != 'C' || num != 3)
-                    {
-                        int LetraASCII;
-                        if (random.Next(0, 2) == 0)
-                        {
-                            LetraASCII = random.Next(65, 91);
-                        }
-                        else
-                            LetraASCII = random.Next(97, 123);
-                        TextBox textbox = new TextBox();
-                        textbox.Width = 58.4;
-                        textbox.Height = 60.7;
-                        textbox.FontSize = 28;
-                        textbox.TextAlignment = TextAlignment.Center;
-                        textbox.HorizontalAlignment = HorizontalAlignment.Center;
-                        textbox.VerticalAlignment = VerticalAlignment.Center;
-                        textbox.Text = LetraASCII.ToString();
-                        textbox.FontFamily = new FontFamily("Showcard Gothic");
-                        textbox.Margin = new Thickness(0, 16, 0, 0);
-                        WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
-                        if (wrapPanel.Children.Count != 0)
-                        {
-                            wrapPanel.Children.RemoveAt(0);
-                            wrapPanel.Children.Add(textbox);
-                        }
-                        else
-                            wrapPanel.Children.Add(textbox); 
-                    }
-                }
-            }
-        }
+        } 
     }
 }

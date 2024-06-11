@@ -19,9 +19,14 @@
     <None Remove="CARTILLA BINGO.png" />
     <None Remove="estrella.png" />
     <None Remove="pngwing.com.png" />
+    <None Remove="sonic.png" />
     <None Remove="TXTWlcm.png" />
     <None Remove="Usuario.png" />
     <None Remove="Wallpaper.png" />
+    <None Remove="WallpaperLB.png" />
+    <None Remove="WallpaperLG.png" />
+    <None Remove="WallpaperLR.png" />
+    <None Remove="WallpaperLY.png" />
     <None Remove="zero.png" />
   </ItemGroup>
 
@@ -40,9 +45,14 @@
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />
     <Resource Include="pngwing.com.png" />
+    <Resource Include="sonic.png" />
     <Resource Include="TXTWlcm.png" />
     <Resource Include="Usuario.png" />
     <Resource Include="Wallpaper.png" />
+    <Resource Include="WallpaperLB.png" />
+    <Resource Include="WallpaperLG.png" />
+    <Resource Include="WallpaperLR.png" />
+    <Resource Include="WallpaperLY.png" />
     <Resource Include="zero.png" />
   </ItemGroup>
 

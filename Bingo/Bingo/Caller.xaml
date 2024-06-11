@@ -78,7 +78,7 @@
         </Image>
         <Button x:Name="BtnGenerar" Content="Generar" BorderBrush="#78d3e7" BorderThickness="5,5,5,5" Background="#5048fe"
                 Style="{StaticResource BotonPersonalizado}"
-                Height="252" FontSize="40" FontFamily="Arista Pro Alternate Fat"
+                Height="252" FontSize="40" FontFamily="Segoe UI Black"
                 VerticalAlignment="Top" Click="BtnGenerar_Click" MouseEnter="BtnGenerar_Encima" Canvas.Top="1222" HorizontalAlignment="Left"
                 Width="384" Canvas.Left="-507">
             <Button.Triggers>
@@ -114,7 +114,18 @@
                 </EventTrigger>
             </TextBox.Triggers>
         </TextBox>
-        <WrapPanel Height="502" Width="504"
+        <Border Style="{StaticResource WrapPanelConBorde}" 
+                BorderBrush="White" BorderThickness="10" Background="#8fcef2"
+                Height="502" Width="504" 
+                Canvas.Left="984" Canvas.Top="38"
+                HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Border.Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
+                </EventTrigger>
+            </Border.Triggers>
+        </Border>
+        <!--<WrapPanel Height="502" Width="504"
            Canvas.Left="1260" Canvas.Top="32"
            HorizontalAlignment="Center" VerticalAlignment="Top"
            Background="#8fcef2">
@@ -123,30 +134,30 @@
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
-        </WrapPanel>
+        </WrapPanel>-->
         <!--FilaA-->
-        <WrapPanel x:Name="A1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="79">
+        <WrapPanel x:Name="A1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1017" Canvas.Top="85">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="A2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1408" Canvas.Top="79">
+        <WrapPanel x:Name="A2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1132" Canvas.Top="85">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="A3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1526" Canvas.Top="79">
+        <WrapPanel x:Name="A3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1250" Canvas.Top="85">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="A4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1643" Canvas.Top="79">
+        <WrapPanel x:Name="A4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1367" Canvas.Top="85">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
@@ -154,28 +165,28 @@
             </WrapPanel.Triggers>
         </WrapPanel>
         <!--FilaB-->
-        <WrapPanel x:Name="B1" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="1293" Canvas.Top="189">
+        <WrapPanel x:Name="B1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1017" Canvas.Top="195">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="B2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1408" Canvas.Top="189">
+        <WrapPanel x:Name="B2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1132" Canvas.Top="195">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="B3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1526" Canvas.Top="189">
+        <WrapPanel x:Name="B3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1250" Canvas.Top="195">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="B4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1643" Canvas.Top="189">
+        <WrapPanel x:Name="B4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1367" Canvas.Top="195">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
@@ -183,28 +194,28 @@
             </WrapPanel.Triggers>
         </WrapPanel>
         <!--FilaC-->
-        <WrapPanel x:Name="C1" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="302">
+        <WrapPanel x:Name="C1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1017" Canvas.Top="308">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="C2" Background="White" Height="78" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1408" Canvas.Top="302">
+        <WrapPanel x:Name="C2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1132" Canvas.Top="308">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="C3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1526" Canvas.Top="302">
+        <WrapPanel x:Name="C3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1250" Canvas.Top="308">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="C4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1643" Canvas.Top="302">
+        <WrapPanel x:Name="C4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1367" Canvas.Top="308">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
@@ -212,28 +223,28 @@
             </WrapPanel.Triggers>
         </WrapPanel>
         <!--FilaD-->
-        <WrapPanel x:Name="D1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1293" Canvas.Top="410">
+        <WrapPanel x:Name="D1" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1017" Canvas.Top="416">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="D2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1408" Canvas.Top="410">
+        <WrapPanel x:Name="D2" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1132" Canvas.Top="416">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="D3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1526" Canvas.Top="410">
+        <WrapPanel x:Name="D3" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1250" Canvas.Top="416">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
         </WrapPanel>
-        <WrapPanel x:Name="D4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="1643" Canvas.Top="410">
+        <WrapPanel x:Name="D4" Background="White" Height="78" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1367" Canvas.Top="416">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
@@ -243,7 +254,7 @@
         <DockPanel LastChildFill="False"/>
         <Button x:Name="BtnAlfGenerar"
                 Style="{StaticResource BotonPersonalizado}"
-                BorderThickness="4" FontFamily="Arista Pro Alternate Fat"
+                BorderThickness="4" FontFamily="Segoe UI Black"
                 BorderBrush="#78d3e7" Background="#5048fe"
                 Canvas.Left="-709" Canvas.Top="-242" 
                 Height="242" Width="394"
@@ -258,10 +269,10 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
-                                 From="-242" To="161"
+                                 From="-242" To="1516"
                                  Duration="0:0:0.4"/>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
-                                 From="-709" To="793"
+                                 From="-709" To="144"
                                  Duration="0:0:0.4"/>
                         </Storyboard>
                     </BeginStoryboard>
@@ -295,6 +306,6 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Image.Triggers>
-        </Image>
+        </Image >
     </Canvas>
 </Window>

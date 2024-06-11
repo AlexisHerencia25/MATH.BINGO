@@ -9,11 +9,11 @@
         WindowStartupLocation="CenterScreen"
         Background="#c4dafa"
         ResizeMode="NoResize" WindowState="Normal">
-    <Grid>
+    <Canvas>
         <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.2" Grid.ColumnSpan="2"/>
         <Polygon Points="700,0 1000,0 1000,200"
                  Fill="#5995dd" Grid.ColumnSpan="2"/>
-        <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2"/>
+        <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="547" VerticalAlignment="Top"/>
         <Ellipse HorizontalAlignment="Left" Height="399" Margin="-115,-59,0,0" Fill="#2878f1" VerticalAlignment="Top" Width="546"/>
         <Ellipse HorizontalAlignment="Left" Height="357" Margin="-115,-63,0,0" Fill="#e7ca5d" VerticalAlignment="Top" Width="515" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
@@ -29,50 +29,36 @@
         <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" Margin="1062,284,0,0" VerticalAlignment="Top" Width="250" Stretch="Fill" Source="/zero.png" Grid.Column="1"/>
         <TextBlock x:Name="displayTextCaller" 
                    TextWrapping="Wrap" TextAlignment="Justify"
-                   VerticalAlignment="Top" Margin="86,241,569,0" 
+                   VerticalAlignment="Center" 
                    FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="99" FontSize="25"
-                   Opacity="0">
-            Serás dirigido a una ventana que cree numeros binarios de forma aleatoria
+                   Opacity="0" Canvas.Left="328" Canvas.Top="232" Width="351" HorizontalAlignment="Left">
+            Serás dirigido a una ventana que genere numeros binarios y letras para rellenar
         </TextBlock>
         <Button x:Name = "BtnCaller"
                 Style="{StaticResource BotonPersonalizado}"
-                Content="Caller"
+                Content="Empezar"
                 FontSize="40" FontFamily="Segoe UI Black"
-                Margin="40,140,569,151"
-                Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar">
-        </Button>
-        <TextBlock x:Name="displayTextJugador" 
-           TextWrapping="Wrap" TextAlignment="Justify"
-           VerticalAlignment="Top" Margin="560,219,42,0" 
-           FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="145" FontSize="20"
-           Opacity="0" Grid.ColumnSpan="2">
-           Serás dirigido a una ventana en donde en una cartilla se generará letras y tendras que tachar cada una que mencione el caller mediante el procedimiento
+                Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar" Height="230" Canvas.Left="304" Canvas.Top="153" Width="375"/>
+        <Image Height="148" Canvas.Left="788" Canvas.Top="10" Width="202" Source="/sonic.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="19" Canvas.Top="485" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30">
+            <Hyperlink Click="HyperLink_Click" MouseEnter="EncimaLinkLabel">
+                Click aquí para abrir la ventana extra
+            </Hyperlink>
         </TextBlock>
-        <Button x:Name = "BtnJugador"
-                Style="{StaticResource BotonPersonalizado}"
-                Content="Jugador"
-                FontSize="40" FontFamily="Segoe UI Black"
-                Margin="560,134,42,145" Click="BtnJugador_Click" MouseEnter="EncimaJugador" MouseLeave="DejarJugador" Grid.ColumnSpan="2"/>
-    </Grid>
+    </Canvas>
     <Window.Resources>
         <!--Animacion informacion (Jugador)-->
         <Storyboard x:Key="CallerDeslizarAbajo">
             <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,341,569,0" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="(Canvas.Top)" To="360" Duration="0:0:0.3"/>
         </Storyboard>
         <Storyboard x:Key="CallerDeslizarArriba">
             <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="Margin" To="86,241,569,0" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetName="displayTextCaller" Storyboard.TargetProperty="(Canvas.Top)" To="232" Duration="0:0:0.3"/>
         </Storyboard>
         <!--Animacion informacion (Jugador)-->
-        <Storyboard x:Key="JugadorDeslizarAbajo">
-            <DoubleAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Margin" To="560,319,42,0" Duration="0:0:0.3"/>
-        </Storyboard>
-        <Storyboard x:Key="JugadorDeslizarArriba">
-            <DoubleAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
-            <ThicknessAnimation Storyboard.TargetName="displayTextJugador" Storyboard.TargetProperty="Margin" To="560,219,42,0" Duration="0:0:0.3"/>
-        </Storyboard>
+        <Storyboard x:Key="JugadorDeslizarAbajo"/>
+        <Storyboard x:Key="JugadorDeslizarArriba"/>
         <Storyboard x:Key="BFX">
             <ThicknessAnimation Storyboard.TargetName="Zero" Storyboard.TargetProperty="Margin" To="-365,284,0,0" Duration="0:0:30"/>
         </Storyboard>

@@ -5,56 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Bingo" AllowsTransparency="True" Background="Transparent"  Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
-    <Grid>
-        <Image x:Name="IMGWallpaper" RenderTransformOrigin="0.442,0.249" Width="2000" Opacity="0.81" Source="/Wallpaper.png"/>
-        <Image x:Name="IMGBONAZO" HorizontalAlignment="Center" Height="826" VerticalAlignment="Top" Width="828" Source="/BINGO.png" Opacity="0.3" Margin="0,158,0,0"/>
-        <Button x:Name="BtnGenerar" 
-                Content="Generar" 
-                Foreground="Black" 
-                BorderBrush="Yellow"
-                BorderThickness="3,3,3,3"
-                Margin="77,366,1278,304" 
-                RenderTransformOrigin="0.5,0.5" 
-                Background="#ecab0f"
-                FontFamily="Franklin Gothic Demi Cond" 
-                FontSize="40" Click="BtnGenerar_Click">
-        </Button>
-        <WrapPanel x:Name="Panel" Background="#ecab0f" Margin="1293,79,103,128" Opacity="0.6" />
-        <!--FilaA-->
-        <WrapPanel x:Name="A1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,418,0,0"/>
-        <WrapPanel x:Name="A2" Background="White" Height="56" Width="59" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,418,0,0"/>
-        <WrapPanel x:Name="A3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,418,0,0"/>
-        <WrapPanel x:Name="A4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,418,0,0"/>
-        <!--FilaB-->
-        <WrapPanel x:Name="B1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,566,0,0"/>
-        <WrapPanel x:Name="B2" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,566,0,0"/>
-        <WrapPanel x:Name="B3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,566,0,0"/>
-        <WrapPanel x:Name="B4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,566,0,0"/>
-        <!--FilaC-->
-        <WrapPanel x:Name="C1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,720,0,0"/>
-        <WrapPanel x:Name="C2" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,720,0,0"/>
-        <WrapPanel x:Name="C3" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,720,0,0"/>
-        <WrapPanel x:Name="C4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,720,0,0"/>
-        <!--FilaD-->
-        <WrapPanel x:Name="D1" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1345,866,0,0"/>
-        <WrapPanel x:Name="D2" Background="White" Height="55" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1466,866,0,0"/>
-        <WrapPanel x:Name="D3" Background="White" Height="56" Width="59" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1593,865,0,0"/>
-        <WrapPanel x:Name="D4" Background="White" Height="56" Width="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1711,865,0,0"/>
-        <TextBox x:Name="TXTbingo"
-                 HorizontalAlignment="Left" 
-                 Margin="1315,96,0,0" 
-                 TextWrapping="Wrap" 
-                 Text="BINGO" 
-                 VerticalAlignment="Top"
-                 Width="480" 
-                 TextAlignment="Center" 
-                 FontFamily="AngryBirds" 
-                 Background="Transparent" 
-                 BorderBrush="Transparent" 
-                 FontSize="180" 
-                 Foreground="White" Height="200" >
-        </TextBox>
-        <DockPanel LastChildFill="False"/>
-    </Grid>
+        Title="Bingo" AllowsTransparency="True" Background="Transparent" Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Canvas>
+        <WrapPanel Height="1080" Width="1920" Background="#fbe81b">
+            <WrapPanel.Triggers>
+                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                 From="0" To="1"
+                                 Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </WrapPanel.Triggers>
+        </WrapPanel>
+        <!--<Image x:Name="IMGWallpaper" RenderTransformOrigin="0.442,0.249" Width="2000" Opacity="0.81" Source="/Wallpaper.png"/>-->
+        <Image x:Name="IMGLineRed" Source="/WallpaperLR.png" Canvas.Left="320" Canvas.Top="-40" HorizontalAlignment="Center" VerticalAlignment="Top" Height="1258" Width="14">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                             From="-1300" To="-138"
+                                             Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="IMGLineG" Source="/WallpaperLG.png" HorizontalAlignment="Center" Canvas.Left="276" VerticalAlignment="Top" Canvas.Top="0" Width="40" Height="1148">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                 From="1200" To="0  "
+                                 Duration="0:0:0.6"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="IMGLineB" Source="/WallpaperLB.png" Canvas.Left="472" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="32">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                             From="-1200" To="0"
+                                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="IMGLineB_Copiar" Source="/WallpaperLB.png" Canvas.Left="510" Width="23" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill" Height="1080">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                 From="-1200" To="0"
+                                 Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="IMGLineY" Source="/WallpaperLY.png" HorizontalAlignment="Center" Canvas.Left="371" Canvas.Top="0" VerticalAlignment="Top" Width="35" Height="1125" Stretch="Fill">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                             From="-1250" To="0"
+                                             Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        
+    </Canvas>
 </Window>

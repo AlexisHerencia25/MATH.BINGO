@@ -62,6 +62,10 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="SExo"/>
+        <Style x:Key="WrapPanelConBorde" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="CornerRadius" Value="35"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
     </Application.Resources>
 </Application>

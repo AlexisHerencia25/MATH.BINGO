@@ -43,13 +43,6 @@ namespace Bingo
             caller.ShowDialog();
             
         }
-
-        private void BtnJugador_Click(object sender, RoutedEventArgs e)
-        {
-            Jugador jugador = new Jugador();
-            jugador.ShowDialog();
-            
-        }
         //Mouse encima del boton
         private void Encima(object sender, MouseEventArgs e)
         {
@@ -75,6 +68,17 @@ namespace Bingo
         {
             Storyboard deslizarinfo = (Storyboard)FindResource("JugadorDeslizarArriba");
             deslizarinfo.Begin();
+        }
+
+        private void HyperLink_Click(object sender, RoutedEventArgs e)
+        {
+            Jugador jugador = new Jugador();
+            jugador.ShowDialog();
+        }
+
+        private void EncimaLinkLabel(object sender, MouseEventArgs e)
+        {
+            Metodos.SfxBtn();
         }
     }
 }
