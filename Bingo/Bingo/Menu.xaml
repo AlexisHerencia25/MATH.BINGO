@@ -10,7 +10,7 @@
         Background="#c4dafa"
         ResizeMode="NoResize" WindowState="Normal">
     <Canvas>
-        <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.2" Grid.ColumnSpan="2"/>
+        <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.1" Grid.ColumnSpan="2"/>
         <Polygon Points="700,0 1000,0 1000,200"
                  Fill="#5995dd" Grid.ColumnSpan="2"/>
         <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="547" VerticalAlignment="Top"/>
