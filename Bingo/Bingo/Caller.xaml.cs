@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static Bingo.Estructura;
@@ -21,6 +22,7 @@ namespace Bingo
     /// </summary>
     public partial class Caller : Window
     {
+        private List<int> lista_binarios = new List<int>();
         private Controles controles = new Controles();
         public Caller()
         {
@@ -28,18 +30,33 @@ namespace Bingo
             Metodos.SFXIntro();
         }
 
-        private void BtnGenerar_Click(object sender, RoutedEventArgs e)
+        private async void BtnGenerar_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            //controles.rndN = (TextBox)FindName("TxtRnd");
-            //controles.rndN.Text = $"{random.Next(65, 91)}";
+            string numerobinario = "";
             int numero = random.Next(65, 91);
-            TxtRnd.Text = "";
+            lista_binarios.Add(numero);
             while (numero > 0)
             {
-                TxtRnd.Text += numero % 2;
+                numerobinario += numero % 2;
                 numero /= 2;
             }
+            numerobinario.Reverse();
+            char[] digitosbinarios = numerobinario.ToCharArray();
+            foreach (int n in new int[] { 1, 2, 3, 4, 5, 6, 7 })
+            {
+                TextBox textBox = (TextBox)FindName($"NB{n}");
+                textBox.Text = $"{digitosbinarios[n - 1]}";
+                Storyboard storyboard = (Storyboard)FindResource("GirarWrapPanel");
+                storyboard.Begin(textBox);
+                Metodos.SfxFlip();
+                await Task.Delay(150);
+            }
+            TextBox lista = (TextBox)FindName("ListaDeNumeros");
+            if (lista.Text == "")
+                lista.Text += $"{numerobinario}";
+            else
+                lista.Text += $", {numerobinario}";
             Metodos.SfxTxt();
         }
 
@@ -48,7 +65,7 @@ namespace Bingo
             Metodos.SfxBtn();
         }
 
-        private void BtnAlfGenerar_Click(object sender, RoutedEventArgs e)
+        private async void BtnAlfGenerar_Click(object sender, RoutedEventArgs e)
         {
             Metodos.SfxTxt();
             Random random = new Random();
@@ -59,11 +76,11 @@ namespace Bingo
                     int Letra;
                     Letra = random.Next(0, 26);
                     TextBox textbox = new TextBox();
-                    textbox.Width = 58.4;
-                    textbox.Height = 60.7;
+                    textbox.Width = 28.4;
+                    textbox.Height = 45.7;
                     textbox.IsReadOnly = true;
                     textbox.BorderThickness = new Thickness(0);
-                    textbox.FontSize = 38;
+                    textbox.FontSize = 28;
                     textbox.TextAlignment = TextAlignment.Center;
                     textbox.HorizontalAlignment = HorizontalAlignment.Center;
                     textbox.VerticalAlignment = VerticalAlignment.Center;
@@ -78,8 +95,13 @@ namespace Bingo
                     }
                     else
                         wrapPanel.Children.Add(textbox);
+                    Storyboard storyboard = (Storyboard)FindResource("GirarWrapPanel");
+                    storyboard.Begin(wrapPanel);
+                    Metodos.SfxFlip();
+                    await Task.Delay(150);
                 }
             }
+
         }
     }
 }

@@ -10,7 +10,7 @@
         Background="#c4dafa"
         ResizeMode="NoResize" WindowState="Normal">
     <Canvas>
-        <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.1" Grid.ColumnSpan="2"/>
+        <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.2" Grid.ColumnSpan="2"/>
         <Polygon Points="700,0 1000,0 1000,200"
                  Fill="#5995dd" Grid.ColumnSpan="2"/>
         <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="547" VerticalAlignment="Top"/>
@@ -26,7 +26,7 @@
             </Ellipse.RenderTransform>
         </Ellipse>
         <Image HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="300" Stretch="Fill" Source="/bingomenu.png" Margin="20,12,0,0"/>
-        <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" Margin="1062,284,0,0" VerticalAlignment="Top" Width="250" Stretch="Fill" Source="/zero.png" Grid.Column="1"/>
+        <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="169" Stretch="Fill" Source="/qubert.png" Canvas.Left="1083" Canvas.Top="268"/>
         <TextBlock x:Name="displayTextCaller" 
                    TextWrapping="Wrap" TextAlignment="Justify"
                    VerticalAlignment="Center" 
@@ -39,7 +39,7 @@
                 Content="Empezar"
                 FontSize="40" FontFamily="Segoe UI Black"
                 Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar" Height="230" Canvas.Left="304" Canvas.Top="153" Width="375"/>
-        <Image Height="148" Canvas.Left="788" Canvas.Top="10" Width="202" Source="/sonic.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Height="183" Canvas.Left="807" Width="183" Source="/logo-upn.png" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="10"/>
         <TextBlock Canvas.Left="19" Canvas.Top="485" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30">
             <Hyperlink Click="HyperLink_Click" MouseEnter="EncimaLinkLabel">
                 Click aquí para abrir la ventana extra
@@ -60,7 +60,7 @@
         <Storyboard x:Key="JugadorDeslizarAbajo"/>
         <Storyboard x:Key="JugadorDeslizarArriba"/>
         <Storyboard x:Key="BFX">
-            <ThicknessAnimation Storyboard.TargetName="Zero" Storyboard.TargetProperty="Margin" To="-365,284,0,0" Duration="0:0:30"/>
+            <DoubleAnimation Storyboard.TargetName="Zero" Storyboard.TargetProperty="(Canvas.Left)" To="-365" Duration="0:0:30"/>
         </Storyboard>
     </Window.Resources>
 </Window>

@@ -4,6 +4,23 @@
              xmlns:local="clr-namespace:Bingo"
              StartupUri="Menu.xaml">
     <Application.Resources>
+        <!--Estilo rombo-->
+        <Style x:Key="EstiloRombo" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Path x:Name="Rombo" Fill="White" Stroke="Black"
+                                  Data="M 2, 33
+                                        l 32, -33
+                                        l 32, 33
+                                        l -32, 33
+                                        l -32, -33"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <!--Estilo bordeado-->
         <Style x:Key="BotonPersonalizado" TargetType="Button">
             <Setter Property="BorderBrush" Value="#1705c6"/>

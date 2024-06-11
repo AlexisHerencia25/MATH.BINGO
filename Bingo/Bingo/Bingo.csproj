@@ -18,9 +18,12 @@
     <None Remove="Caller.png" />
     <None Remove="CARTILLA BINGO.png" />
     <None Remove="estrella.png" />
+    <None Remove="logo-upn.png" />
     <None Remove="pngwing.com.png" />
+    <None Remove="qubert.png" />
     <None Remove="sonic.png" />
     <None Remove="TXTWlcm.png" />
+    <None Remove="UPN.png" />
     <None Remove="Usuario.png" />
     <None Remove="Wallpaper.png" />
     <None Remove="WallpaperLB.png" />
@@ -44,9 +47,12 @@
     <Resource Include="Caller.png" />
     <Resource Include="CARTILLA BINGO.png" />
     <Resource Include="estrella.png" />
+    <Resource Include="logo-upn.png" />
     <Resource Include="pngwing.com.png" />
+    <Resource Include="qubert.png" />
     <Resource Include="sonic.png" />
     <Resource Include="TXTWlcm.png" />
+    <Resource Include="UPN.png" />
     <Resource Include="Usuario.png" />
     <Resource Include="Wallpaper.png" />
     <Resource Include="WallpaperLB.png" />

@@ -40,5 +40,11 @@ namespace Bingo
             texto.SoundLocation = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\SFX\\click.wav";
             texto.Load(); texto.Play();
         }
+        public static void SfxFlip()
+        {
+            SoundPlayer flip = new SoundPlayer();
+            flip.SoundLocation = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\SFX\\flip.wav";
+            flip.Load(); flip.Play();
+        }
     }
 }
