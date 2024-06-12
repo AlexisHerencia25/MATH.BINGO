@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ using static Bingo.Estructura;
 
 namespace Bingo
 {
-    
+
     /// <summary>
     /// Lógica de interacción para Caller.xaml
     /// </summary>
@@ -24,6 +25,8 @@ namespace Bingo
     {
         private List<int> lista_binarios = new List<int>();
         private Controles controles = new Controles();
+        private bool[] letrasmarcadas = new bool[17] { false, false , false , false , false , false , false , false , false , false , false , false , false , false , false , false , false };
+        private bool activarBINGO = false;
         public Caller()
         {
             InitializeComponent();
@@ -100,6 +103,7 @@ namespace Bingo
                     Metodos.SfxFlip();
                     await Task.Delay(150);
                     Button button = (Button)FindName($"{alf}{num}Btn");
+                    button.IsEnabled = true;
                     button.Opacity = 1;
                 }
             }
@@ -119,6 +123,56 @@ namespace Bingo
             Storyboard aparecer = (Storyboard)FindResource("AparecerEjemplos");
             aparecer.Begin(imagen1);
             aparecer.Begin(imagen2);
+        }
+
+        private void MarcarX(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                foreach (var child in ((StackPanel)button.Content).Children)
+                {
+                    if (child is Image image)
+                        image.Opacity = 1;
+                    for (int i = 0; i < letrasmarcadas.Length - 1; i++)
+                    {
+                        if (letrasmarcadas[i] == false)
+                        {
+                            letrasmarcadas[i] = true;
+                            break;
+                        }
+                    }
+                }
+                if (letrasmarcadas[15] == true)
+                    BINGOGANADOR();
+                button.IsEnabled = false;
+            }
+        }
+        private void BINGOGANADOR()
+        {
+            Menu menuWindow = Application.Current.Windows.OfType<Menu>().FirstOrDefault();
+            menuWindow.Close();
+            BINGOOO.Source = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Music", "Fanfare.mp3"));
+            BINGOOO.Play();
+        }
+
+        private void BotonEncimaAlf(object sender, MouseEventArgs e)
+        {
+            Metodos.SfxBtn();
+            if (sender is Button button)
+            {
+                button.Background = new SolidColorBrush(Colors.Red);
+                button.BorderBrush = new SolidColorBrush(Colors.Red);
+                button.Opacity = 0.3;
+            }
+        }
+
+        private void BotonLeaveAlf(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = new SolidColorBrush(Colors.Transparent);
+                button.Opacity = 1;
+            }
         }
     }
 }

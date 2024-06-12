@@ -14,6 +14,12 @@ namespace Bingo
 {
     public class Metodos : Window
     {
+        public static void BackgroundMusic()
+        {
+            MediaElement metodos = new MediaElement();
+            metodos.Source = new Uri($"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory)}\\Music\\Layer Cake.mp3");
+            metodos.Play();
+        }
         public static void SFXIntro()
         {
             SoundPlayer intro = new SoundPlayer();

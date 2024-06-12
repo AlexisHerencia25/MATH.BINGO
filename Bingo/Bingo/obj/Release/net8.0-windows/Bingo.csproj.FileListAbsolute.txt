@@ -91,3 +91,4 @@ C:\Users\ALEXIS\Desktop\T2\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Bin
 C:\Users\ALEXIS\Desktop\T2\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Bingo.genruntimeconfig.cache
 C:\Users\ALEXIS\Desktop\T2\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\ref\Bingo.dll
 C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\obj\Release\net8.0-windows\Bingo.csproj.Up2Date
+C:\Users\Alexis\Desktop\MATH.BINGO\Bingo\Bingo\bin\Release\net8.0-windows\WpfAnimatedGif.dll

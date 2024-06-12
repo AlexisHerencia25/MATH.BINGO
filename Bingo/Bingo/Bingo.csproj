@@ -12,6 +12,7 @@
     <None Remove="BINGO.png" />
     <None Remove="bingomenu.png" />
     <None Remove="BINGOtxt.png" />
+    <None Remove="BINGOWIN.gif" />
     <None Remove="bubble_1.png" />
     <None Remove="bubble_14.png" />
     <None Remove="bubble_18.png" />
@@ -32,17 +33,20 @@
     <None Remove="WallpaperLG.png" />
     <None Remove="WallpaperLR.png" />
     <None Remove="WallpaperLY.png" />
+    <None Remove="X.png" />
     <None Remove="zero.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="BINGO.png" />
     <Resource Include="bingomenu.png" />
     <Resource Include="BINGOtxt.png" />
+    <Resource Include="BINGOWIN.gif" />
     <Resource Include="bubble_1.png" />
     <Resource Include="bubble_14.png" />
     <Resource Include="bubble_18.png" />
@@ -63,6 +67,7 @@
     <Resource Include="WallpaperLG.png" />
     <Resource Include="WallpaperLR.png" />
     <Resource Include="WallpaperLY.png" />
+    <Resource Include="X.png" />
     <Resource Include="zero.png" />
   </ItemGroup>
 

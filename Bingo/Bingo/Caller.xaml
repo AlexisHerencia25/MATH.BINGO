@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
         Background="Transparent"
@@ -27,6 +28,7 @@
         </Storyboard>
     </Window.Resources>
     <Canvas x:Name="Contenedor" Margin="0,0,0,0">
+        <MediaElement x:Name="BINGOOO" LoadedBehavior="Manual" Position="0:0:0.8"/>
         <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-479" Canvas.Top="500" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.9">
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -477,37 +479,102 @@
                Canvas.Left="447" Canvas.Top="588"
                FontSize="50" FontFamily="Forte" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="A1Btn" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="1003" Canvas.Top="230" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf"
+                IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="A2Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1078" Canvas.Top="230" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="A3Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1154" Canvas.Top="230" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="A4Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1229" Canvas.Top="230" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="B1Btn" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Left="1003" Canvas.Top="301" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="B2Btn" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="1078" Canvas.Top="301" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="B3Btn" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="1154" Canvas.Top="301" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="B4Btn" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="1229" Canvas.Top="301" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="C1Btn" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Left="1003" Canvas.Top="374" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="C2Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1078" Canvas.Top="374" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="C3Btn" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="1154" Canvas.Top="374" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="C4Btn" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="1229" Canvas.Top="374" Width="53" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="D1Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1003" Canvas.Top="443" Width="54" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="D2Btn" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Left="1078" Canvas.Top="444" Width="52" Height="51"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="D3Btn" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="1154" Canvas.Top="444" Width="53" Height="50"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf" IsEnabled="False">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Button x:Name="D4Btn" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Left="1229" Canvas.Top="444" Width="53" Height="50"
-                Background="Transparent" BorderBrush="Black" Opacity="0"/>
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf">
+            <StackPanel>
+                <Image Source="/X.png" Opacity="0"/>
+            </StackPanel>
+        </Button>
         <Image x:Name="IMGConversion" Height="210" Canvas.Left="697" Canvas.Top="-228" Width="233" Source="/conversionbinaria.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="1">
             <Image.Triggers>
                 <EventTrigger RoutedEvent="MouseEnter">
@@ -564,5 +631,6 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
+        <Image gif:ImageBehavior.AnimatedSource="/BINGOWIN.gif" Canvas.Left="-963" Canvas.Top="-325" Height="520" Width="766" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>
