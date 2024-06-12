@@ -10,7 +10,7 @@
         Background="#c4dafa"
         ResizeMode="NoResize" WindowState="Normal">
     <Canvas>
-        <MediaElement Name="BackgroundMusic" Source="Music/Tidal tempest.mp3" Volume="0.2" Grid.ColumnSpan="2"/>
+        <MediaElement Name="BackgroundMusic" Source="Music/Layer Cake.mp3" Volume="0.2" Grid.ColumnSpan="2" Position="0:0:15.2"/>
         <Polygon Points="700,0 1000,0 1000,200"
                  Fill="#5995dd" Grid.ColumnSpan="2"/>
         <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="547" VerticalAlignment="Top"/>
@@ -38,7 +38,7 @@
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Empezar"
                 FontSize="40" FontFamily="Segoe UI Black"
-                Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar" Height="230" Canvas.Left="304" Canvas.Top="153" Width="375"/>
+                Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar" Height="231" Canvas.Left="304" Canvas.Top="153" Width="390" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Image Height="183" Canvas.Left="807" Width="183" Source="/logo-upn.png" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="10"/>
         <TextBlock Canvas.Left="19" Canvas.Top="485" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30">
             <Hyperlink Click="HyperLink_Click" MouseEnter="EncimaLinkLabel">

@@ -34,14 +34,17 @@ namespace Bingo
         {
             Random random = new Random();
             string numerobinario = "";
+            List<int> bits = new List<int>();
             int numero = random.Next(65, 91);
+            int tempnumero = numero;
             lista_binarios.Add(numero);
-            while (numero > 0)
+            while (tempnumero > 0)
             {
-                numerobinario += numero % 2;
-                numero /= 2;
+                bits.Add(tempnumero % 2);
+                tempnumero /= 2;
             }
-            numerobinario.Reverse();
+            bits.Reverse();
+            numerobinario = string.Join("", bits);
             char[] digitosbinarios = numerobinario.ToCharArray();
             foreach (int n in new int[] { 1, 2, 3, 4, 5, 6, 7 })
             {
@@ -52,6 +55,7 @@ namespace Bingo
                 Metodos.SfxFlip();
                 await Task.Delay(150);
             }
+            await Task.Delay(300);
             TextBox lista = (TextBox)FindName("ListaDeNumeros");
             if (lista.Text == "")
                 lista.Text += $"{numerobinario}";
@@ -60,11 +64,7 @@ namespace Bingo
             Metodos.SfxTxt();
         }
 
-        private void BtnGenerar_Encima(object sender, MouseEventArgs e)
-        {
-            Metodos.SfxBtn();
-        }
-
+        private void BtnGenerar_Encima(object sender, MouseEventArgs e) => Metodos.SfxBtn();
         private async void BtnAlfGenerar_Click(object sender, RoutedEventArgs e)
         {
             Metodos.SfxTxt();
@@ -99,9 +99,26 @@ namespace Bingo
                     storyboard.Begin(wrapPanel);
                     Metodos.SfxFlip();
                     await Task.Delay(150);
+                    Button button = (Button)FindName($"{alf}{num}Btn");
+                    button.Opacity = 1;
                 }
             }
-
+            await Task.Delay(350);
+            Button btngenerar = (Button)FindName("BtnAlfGenerar");
+            Canvas contenedor = (Canvas)FindName("Contenedor");
+            Metodos.SfxRemove();
+            contenedor.Children.Remove(btngenerar);
+            await Task.Delay(1000);
+            Metodos.SfxSlide();
+            GenerarAnimacion();
+        }
+        private void GenerarAnimacion()
+        {
+            Image imagen1 = (Image)FindName("IMGConversion");
+            Image imagen2 = (Image)FindName("IMGTabla");
+            Storyboard aparecer = (Storyboard)FindResource("AparecerEjemplos");
+            aparecer.Begin(imagen1);
+            aparecer.Begin(imagen2);
         }
     }
 }

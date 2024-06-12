@@ -17,11 +17,13 @@
     <None Remove="bubble_18.png" />
     <None Remove="Caller.png" />
     <None Remove="CARTILLA BINGO.png" />
+    <None Remove="conversionbinaria.jpg" />
     <None Remove="estrella.png" />
     <None Remove="logo-upn.png" />
     <None Remove="pngwing.com.png" />
     <None Remove="qubert.png" />
     <None Remove="sonic.png" />
+    <None Remove="tablaASCII.jpg" />
     <None Remove="TXTWlcm.png" />
     <None Remove="UPN.png" />
     <None Remove="Usuario.png" />
@@ -46,11 +48,13 @@
     <Resource Include="bubble_18.png" />
     <Resource Include="Caller.png" />
     <Resource Include="CARTILLA BINGO.png" />
+    <Resource Include="conversionbinaria.jpg" />
     <Resource Include="estrella.png" />
     <Resource Include="logo-upn.png" />
     <Resource Include="pngwing.com.png" />
     <Resource Include="qubert.png" />
     <Resource Include="sonic.png" />
+    <Resource Include="tablaASCII.jpg" />
     <Resource Include="TXTWlcm.png" />
     <Resource Include="UPN.png" />
     <Resource Include="Usuario.png" />
