@@ -33,6 +33,11 @@ namespace Bingo
         {
             InitializeComponent();
             Metodos.SFXIntro();
+            GenerarTextBox();
         } 
+        private void GenerarTextBox()
+        {
+
+        }
     }
 }

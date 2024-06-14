@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 using static Bingo.Estructura;
 
 namespace Bingo
@@ -23,6 +24,7 @@ namespace Bingo
     /// </summary>
     public partial class Caller : Window
     {
+        private static Stopwatch stopwatch = new Stopwatch();
         private List<int> lista_binarios = new List<int>();
         private Controles controles = new Controles();
         private bool[] letrasmarcadas = new bool[17] { false, false , false , false , false , false , false , false , false , false , false , false , false , false , false , false , false };
@@ -31,6 +33,7 @@ namespace Bingo
         {
             InitializeComponent();
             Metodos.SFXIntro();
+            stopwatch.Start();
         }
 
         private async void BtnGenerar_Click(object sender, RoutedEventArgs e)
@@ -125,7 +128,7 @@ namespace Bingo
             aparecer.Begin(imagen2);
         }
 
-        private void MarcarX(object sender, RoutedEventArgs e)
+        private async void MarcarX(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
             {
@@ -142,15 +145,24 @@ namespace Bingo
                         }
                     }
                 }
-                if (letrasmarcadas[15] == true)
-                    BINGOGANADOR();
                 button.IsEnabled = false;
+                if (letrasmarcadas[15] == true)
+                {
+                    BINGOGANADOR();
+                    await Task.Delay(5000);
+                    MessageBox.Show("HAS GANADO EL BINGO :D", "ENHORABUENA");
+                    TimeSpan elapsed = stopwatch.Elapsed;
+                    MessageBox.Show($"Tiempo transcurrido: {elapsed.Minutes}:{elapsed.Seconds}");
+                }
+
             }
         }
         private void BINGOGANADOR()
         {
             Menu menuWindow = Application.Current.Windows.OfType<Menu>().FirstOrDefault();
             menuWindow.Close();
+            Storyboard animacion = (Storyboard)FindResource("WINBINGO");
+            animacion.Begin(IMGBINGO);
             BINGOOO.Source = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Music", "Fanfare.mp3"));
             BINGOOO.Play();
         }

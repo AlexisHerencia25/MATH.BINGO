@@ -10,6 +10,12 @@
         AllowsTransparency="True"
         Title="Caller" Height="768" Width="1360" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
     <Window.Resources>
+        <Storyboard x:Key="WINBINGO">
+            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
+                             To="297" Duration="0:0:0.4"/>
+            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                             To="124" Duration="0:0:0.4"/>
+        </Storyboard>
         <Storyboard x:Key="AparecerEjemplos">
             <DoubleAnimation Storyboard.TargetProperty="Opacity"
                      From="0" To="1"
@@ -28,7 +34,7 @@
         </Storyboard>
     </Window.Resources>
     <Canvas x:Name="Contenedor" Margin="0,0,0,0">
-        <MediaElement x:Name="BINGOOO" LoadedBehavior="Manual" Position="0:0:0.8"/>
+        <MediaElement x:Name="BINGOOO" LoadedBehavior="Manual" Position="0:0:0.8" Volume="0.3"/>
         <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-479" Canvas.Top="500" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.9">
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -631,6 +637,8 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
-        <Image gif:ImageBehavior.AnimatedSource="/BINGOWIN.gif" Canvas.Left="-963" Canvas.Top="-325" Height="520" Width="766" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="IMGBINGO" gif:ImageBehavior.AnimatedSource="/BINGOWIN.gif" Canvas.Left="-963" Canvas.Top="-325" Height="520" Width="766" HorizontalAlignment="Left" VerticalAlignment="Top">
+            
+        </Image>
     </Canvas>
 </Window>
