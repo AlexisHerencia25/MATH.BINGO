@@ -29,6 +29,7 @@ namespace Bingo
         private Controles controles = new Controles();
         private bool[] letrasmarcadas = new bool[17] { false, false , false , false , false , false , false , false , false , false , false , false , false , false , false , false , false };
         private bool activarBINGO = false;
+        private bool verificando_igualdad = false;
         public Caller()
         {
             InitializeComponent();
@@ -43,7 +44,7 @@ namespace Bingo
             List<int> bits = new List<int>();
             int numero = random.Next(65, 91);
             int tempnumero = numero;
-            lista_binarios.Add(numero);
+            //lista_binarios.Add(numero);
             while (tempnumero > 0)
             {
                 bits.Add(tempnumero % 2);
@@ -67,6 +68,7 @@ namespace Bingo
                 lista.Text += $"{numerobinario}";
             else
                 lista.Text += $", {numerobinario}";
+            lista_binarios.Add(Convert.ToInt32(numerobinario));
             Metodos.SfxTxt();
         }
 
@@ -75,10 +77,12 @@ namespace Bingo
         {
             Metodos.SfxTxt();
             Random random = new Random();
+            List<char> letras_disponibles = Enumerable.Range('A', 26).Select(x => (char)x).ToList();
             foreach (char alf in new char[4] { 'A', 'B', 'C', 'D' })
             {
                 foreach (int num in new int[4] { 1, 2, 3, 4 })
                 {
+                    int index = random.Next(letras_disponibles.Count);
                     int Letra;
                     Letra = random.Next(0, 26);
                     TextBox textbox = new TextBox();
@@ -90,8 +94,8 @@ namespace Bingo
                     textbox.TextAlignment = TextAlignment.Center;
                     textbox.HorizontalAlignment = HorizontalAlignment.Center;
                     textbox.VerticalAlignment = VerticalAlignment.Center;
-                    textbox.Text = $"{(char)('A' + Letra)}";
-                    textbox.FontFamily = new FontFamily("Cassia");
+                    textbox.Text = $"{letras_disponibles[index]}";
+                    letras_disponibles.RemoveAt(index);
                     textbox.Margin = new Thickness(12, 15, 0, 0);
                     WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
                     if (wrapPanel.Children.Count != 0)
@@ -132,29 +136,70 @@ namespace Bingo
         {
             if (sender is Button button)
             {
-                foreach (var child in ((StackPanel)button.Content).Children)
+                foreach (char alf in new char[4] { 'A', 'B', 'C', 'D' })
                 {
-                    if (child is Image image)
-                        image.Opacity = 1;
-                    for (int i = 0; i < letrasmarcadas.Length - 1; i++)
+                    foreach (int num in new int[4] { 1, 2, 3, 4 })
                     {
-                        if (letrasmarcadas[i] == false)
+                        WrapPanel wrapPanel = (WrapPanel)FindName($"{alf}{num}");
+                        foreach (UIElement element in wrapPanel.Children)
                         {
-                            letrasmarcadas[i] = true;
+                            if (element is TextBox textBox)
+                            {
+                                foreach (int binarios in lista_binarios)
+                                {
+                                    int numerodecimal = ConvertirADecimal(binarios);
+                                    char alfabeto = Convert.ToChar(numerodecimal);
+                                    if (textBox.Text == $"{alfabeto}")
+                                    {
+                                        verificando_igualdad = true;
+                                        break;
+                                    }
+                                }
+                                if (verificando_igualdad)
+                                    break;
+                            }
+                        }
+                        if (verificando_igualdad)
                             break;
+                    }
+                    if (verificando_igualdad)
+                        break;
+                }
+
+                if (verificando_igualdad)
+                {
+                    foreach (var child in ((StackPanel)button.Content).Children)
+                    {
+                        if (child is Image image)
+                            image.Opacity = 1;
+                        for (int i = 0; i < letrasmarcadas.Length - 1; i++)
+                        {
+                            if (letrasmarcadas[i] == false)
+                            {
+                                letrasmarcadas[i] = true;
+                                break;
+                            }
                         }
                     }
+                    button.IsEnabled = false;
                 }
-                button.IsEnabled = false;
+                else
+                {
+                    MessageBox.Show("Parece que ningun dato coincide");
+                }
+
                 if (letrasmarcadas[15] == true)
                 {
                     BINGOGANADOR();
-                    await Task.Delay(5000);
-                    MessageBox.Show("HAS GANADO EL BINGO :D", "ENHORABUENA");
+                    Bloqueador.Background = Brushes.Transparent;
+                    await Task.Delay(5200);
+                    MessageBox.Show("HAS GANADO", "ENHORABUENA");
                     TimeSpan elapsed = stopwatch.Elapsed;
-                    MessageBox.Show($"Tiempo transcurrido: {elapsed.Minutes}:{elapsed.Seconds}");
+                    MessageBox.Show($"Tiempo transcurrido: {elapsed.Minutes}:{elapsed.Seconds}", "Tiempo transcurrido");
+                    Storyboard aparecerboton = (Storyboard)FindResource("AparecerBoton");
+                    Metodos.SfxSlide();
+                    aparecerboton.Begin(BtnVolver);
                 }
-
             }
         }
         private void BINGOGANADOR()
@@ -185,6 +230,34 @@ namespace Bingo
                 button.Background = new SolidColorBrush(Colors.Transparent);
                 button.Opacity = 1;
             }
+        }
+
+        private async void BtnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new Menu();
+            Storyboard xd = (Storyboard)FindResource("Desparecertodo");
+            xd.Begin(Contenedor);
+            Metodos.SfxRemove();
+            while (BINGOOO.Volume > 0)
+            {
+                BINGOOO.Volume -= 0.05;
+                await Task.Delay(100);
+            }
+            this.Close();
+            menu.Show();
+        }
+        private static int ConvertirADecimal(int binario)
+        {
+            int decimaltotal = 0, conversion = 1;
+            char[] binarios = binario.ToString().ToCharArray();
+            Array.Reverse(binarios);
+            foreach (char c in binarios) 
+            {
+                if (c == '1')
+                    decimaltotal += conversion;
+                conversion *= 2;
+            }
+            return decimaltotal;
         }
     }
 }

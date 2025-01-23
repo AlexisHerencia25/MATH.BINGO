@@ -6,9 +6,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="aigis.png" />
     <None Remove="BINGO.png" />
     <None Remove="bingomenu.png" />
     <None Remove="BINGOtxt.png" />
@@ -18,6 +20,7 @@
     <None Remove="bubble_18.png" />
     <None Remove="Caller.png" />
     <None Remove="CARTILLA BINGO.png" />
+    <None Remove="Circle_I.png" />
     <None Remove="conversionbinaria.jpg" />
     <None Remove="estrella.png" />
     <None Remove="logo-upn.png" />
@@ -34,16 +37,19 @@
     <None Remove="WallpaperLG.png" />
     <None Remove="WallpaperLR.png" />
     <None Remove="WallpaperLY.png" />
+    <None Remove="water.gif" />
     <None Remove="X.png" />
     <None Remove="zero.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.122" />
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="aigis.png" />
     <Resource Include="BINGO.png" />
     <Resource Include="bingomenu.png" />
     <Resource Include="BINGOtxt.png" />
@@ -53,6 +59,7 @@
     <Resource Include="bubble_18.png" />
     <Resource Include="Caller.png" />
     <Resource Include="CARTILLA BINGO.png" />
+    <Resource Include="Circle_I.png" />
     <Resource Include="conversionbinaria.jpg" />
     <Resource Include="estrella.png" />
     <Resource Include="logo-upn.png" />
@@ -69,6 +76,7 @@
     <Resource Include="WallpaperLG.png" />
     <Resource Include="WallpaperLR.png" />
     <Resource Include="WallpaperLY.png" />
+    <Resource Include="water.gif" />
     <Resource Include="X.png" />
     <Resource Include="zero.png" />
   </ItemGroup>

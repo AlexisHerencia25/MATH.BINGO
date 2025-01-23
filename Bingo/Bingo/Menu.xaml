@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Menu" Height="563" Width="1000" 
+        Title="Menu" Height="543" Width="1000" 
         WindowStartupLocation="CenterScreen"
         Background="#c4dafa"
         ResizeMode="NoResize" WindowState="Normal">
     <Canvas>
-        <MediaElement Name="BackgroundMusic" Source="Music/Layer Cake.mp3" Volume="0.2" Grid.ColumnSpan="2" Position="0:0:15.2"/>
+        <MediaElement Name="BackgroundMusic" Source="Music/Cool Morning - DV3.mp3" Volume="0.1" Grid.ColumnSpan="2" MediaEnded="RepetirMusica" UnloadedBehavior="Manual"/>
         <Polygon Points="700,0 1000,0 1000,200"
                  Fill="#5995dd" Grid.ColumnSpan="2"/>
         <Polygon Points="0,0 0,563 1000,563 1000,290" Fill="#48d3e9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="547" VerticalAlignment="Top"/>
@@ -25,21 +25,90 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Image HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="300" Stretch="Fill" Source="/bingomenu.png" Margin="20,12,0,0"/>
-        <Image x:Name="Zero" HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="169" Stretch="Fill" Source="/qubert.png" Canvas.Left="1083" Canvas.Top="268"/>
+        <Image x:Name="BingoIMG" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="300" Stretch="Fill" Source="/bingomenu.png" >
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="#dcaf68" BlurRadius="10" Direction="200" ShadowDepth="5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Image.Style>
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <!-- Animar Width con KeyFrames -->
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Duration="0:0:0.58" RepeatBehavior="Forever">
+                                <DoubleAnimationUsingKeyFrames.KeyFrames>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.18" Value="350" KeySpline="0,1.1,1,1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="300" KeySpline="0.6,0,1,0.9"/>
+                                </DoubleAnimationUsingKeyFrames.KeyFrames>
+                            </DoubleAnimationUsingKeyFrames>
+                            <!--Animar Height con KeyFrames-->
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Duration="0:0:0.58" RepeatBehavior="Forever">
+                                <DoubleAnimationUsingKeyFrames.KeyFrames>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.18" Value="187" KeySpline="0,1.1,1,1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="160" KeySpline="0.6,0,1,0.9"/>
+                                </DoubleAnimationUsingKeyFrames.KeyFrames>
+                            </DoubleAnimationUsingKeyFrames>
+                            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)" Duration="0:0:0.8" RepeatBehavior="Forever">
+                                <DoubleAnimationUsingKeyFrames.KeyFrames>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-20" KeySpline="0.1,0.9,0.2,1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0" KeySpline="0.2,1,0.3,1"/>
+                                </DoubleAnimationUsingKeyFrames.KeyFrames>
+                            </DoubleAnimationUsingKeyFrames>-->
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
+                                             From="-300" To="0"
+                                             Duration="0:0:0.4"/>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                             From="-300" To="0"
+                                             Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image x:Name="Aigis" Source="/aigis.png" Canvas.Left="679" Canvas.Top="300" Height="225" Width="278" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" BlurRadius="10" Direction="320" ShadowDepth="5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Image.Style>
+        </Image>
         <TextBlock x:Name="displayTextCaller" 
                    TextWrapping="Wrap" TextAlignment="Justify"
                    VerticalAlignment="Center" 
                    FontFamily="Aardvark Cafe" Foreground="White" FontWeight="Bold" Height="99" FontSize="25"
                    Opacity="0" Canvas.Left="328" Canvas.Top="232" Width="351" HorizontalAlignment="Left">
-            Serás dirigido a una ventana que genere numeros binarios y letras para rellenar
+            Serás dirigido a una ventana que genere números binarios y letras para rellenar
         </TextBlock>
         <Button x:Name = "BtnCaller"
                 Style="{StaticResource BotonPersonalizado}"
                 Content="Empezar"
                 FontSize="40" FontFamily="Segoe UI Black"
                 Click="BtnCaller_Click" MouseEnter="Encima" MouseLeave="Dejar" Height="231" Canvas.Left="304" Canvas.Top="153" Width="390" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Image Height="183" Canvas.Left="807" Width="183" Source="/logo-upn.png" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="10"/>
+        <Image x:Name="Circle" Source="/Circle_I.png" Height="156" Canvas.Left="827" Canvas.Top="12" Width="156">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                                             From="0" To="360" Duration="0:0:5" RepeatBehavior="Forever"/>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+            <Image.RenderTransform>
+                <RotateTransform CenterX="78" CenterY="78"/>
+            </Image.RenderTransform>
+        </Image>
         <TextBlock Canvas.Left="19" Canvas.Top="485" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30">
             <Hyperlink Click="HyperLink_Click" MouseEnter="EncimaLinkLabel">
                 Click aquí para abrir la ventana extra
@@ -59,8 +128,5 @@
         <!--Animacion informacion (Jugador)-->
         <Storyboard x:Key="JugadorDeslizarAbajo"/>
         <Storyboard x:Key="JugadorDeslizarArriba"/>
-        <Storyboard x:Key="BFX">
-            <DoubleAnimation Storyboard.TargetName="Zero" Storyboard.TargetProperty="(Canvas.Left)" To="-365" Duration="0:0:30"/>
-        </Storyboard>
     </Window.Resources>
 </Window>

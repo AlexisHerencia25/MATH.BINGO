@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bingo"
         mc:Ignorable="d"
-        Title="Bingo" AllowsTransparency="True" Background="Transparent" Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
-    <Canvas>
-        <WrapPanel Height="1080" Width="1920" Background="#fbe81b">
+        Title="Bingo" AllowsTransparency="True" Background="Transparent" Height="768" Width="1360" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Resources>
+        <Storyboard x:Key="DesaparecerCanvas">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                     To="0" Duration="0:0:0.9"/>
+        </Storyboard>
+    </Window.Resources>
+    <Canvas Name="canvas">
+        <WrapPanel Height="768" Width="1360" Background="#fbe81b">
             <WrapPanel.Triggers>
                 <EventTrigger RoutedEvent="WrapPanel.Loaded">
                     <BeginStoryboard>
@@ -107,6 +113,67 @@
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
                                              From="1250" To="-24"
                                              Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image Height="186" Width="188" Source="/UPN.png" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="10" Canvas.Left="1134">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="White" BlurRadius="50" Direction="250" ShadowDepth="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Label x:Name="MensajeDeAviso" FontSize="30" Foreground="Red" FontFamily="Swis721 BlkCn BT" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="-51" Canvas.Left="610">
+            Recomendación: Escribe las letras faltantes en mayúscula
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Label.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                                             To="0"
+                                             Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Button x:Name="XD" Width="395" Height="224" Canvas.Left="970" Canvas.Top="554"
+                Content="Verificar" Click="Click_Verificar" Style="{StaticResource EstiloAmarillo}" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Black" MouseEnter="BtnVerificar_Entrar"/>
+        <Image x:Name="IMGTabla" Height="288" Canvas.Left="894" Canvas.Top="81" Width="215" Source="/tablaASCII.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.4">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Height"
+                                             To="538"
+                                             Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Width"
+                                             To="400"
+                                             Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             To="0.9"
+                                             Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Height"
+                                             To="289"
+                                             Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Width"
+                                             To="215"
+                                             Duration="0:0:0.3"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             To="0.3"
+                                             Duration="0:0:0.3"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>

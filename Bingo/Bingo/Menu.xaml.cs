@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace Bingo
 {
@@ -22,19 +23,14 @@ namespace Bingo
     /// </summary>
     public partial class Menu : Window
     {
-        
-        
+
         public Menu()
         {
             InitializeComponent();
-            AnimacionBFX();
+            BackgroundMusic.UnloadedBehavior = MediaState.Manual;
+            BingoIMG.RenderTransform = new TranslateTransform();
             this.Width = 1000;
             this.Height = 563;
-        }
-        private void AnimacionBFX()
-        {
-            Storyboard zero = (Storyboard)FindResource("BFX");
-            zero.Begin();
         }
         //Evento Clicks
         private void BtnCaller_Click(object sender, RoutedEventArgs e)
@@ -79,6 +75,12 @@ namespace Bingo
         private void EncimaLinkLabel(object sender, MouseEventArgs e)
         {
             Metodos.SfxBtn();
+        }
+
+        private void RepetirMusica(object sender, RoutedEventArgs e)
+        {
+                BackgroundMusic.Position = new TimeSpan(0, 0, 0, 19, 99);
+                BackgroundMusic.Play();
         }
     }
 }

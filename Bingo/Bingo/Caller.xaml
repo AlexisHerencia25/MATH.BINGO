@@ -10,6 +10,14 @@
         AllowsTransparency="True"
         Title="Caller" Height="768" Width="1360" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
     <Window.Resources>
+        <Storyboard x:Key="AparecerBoton">
+            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                             To="556" Duration="0:0:0.5"/>
+        </Storyboard>
+        <Storyboard x:Key="Desparecertodo">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                             To="0" Duration="0:0:0.9"/>
+        </Storyboard>
         <Storyboard x:Key="WINBINGO">
             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
                              To="297" Duration="0:0:0.4"/>
@@ -33,9 +41,23 @@
                          From="0" To="1" Duration="0:0:0.4"/>
         </Storyboard>
     </Window.Resources>
-    <Canvas x:Name="Contenedor" Margin="0,0,0,0">
-        <MediaElement x:Name="BINGOOO" LoadedBehavior="Manual" Position="0:0:0.8" Volume="0.3"/>
-        <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-479" Canvas.Top="500" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.9">
+    <Canvas x:Name="Contenedor" Margin="0,0,0,0" Opacity="1">
+        <Image x:Name="AguaGif" gif:ImageBehavior.AnimatedSource="/water.gif" Height="924" Width="1386" Canvas.Left="-13" Canvas.Top="-100">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="0" To="1"
+                                             Duration="0:0:0.7"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <MediaElement x:Name="BINGOOO" LoadedBehavior="Manual" Position="0:0:0.8" Volume="0.6"/>
+
+        <Rectangle x:Name="Font1" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#08b5d1" Canvas.Left="-479" Canvas.Top="500" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.7">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -45,7 +67,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
             <Rectangle.Triggers>
-                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
@@ -59,7 +81,7 @@
                 </EventTrigger>
             </Rectangle.Triggers>
         </Rectangle>
-        <Rectangle x:Name="Font2" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#09269b" Canvas.Left="97" Canvas.Top="-683" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.9">
+        <Rectangle x:Name="Font2" Height="1313" Width="2384" RenderTransformOrigin="0.5,0.5" Fill="#09269b" Canvas.Left="97" Canvas.Top="-683" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.7">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -69,7 +91,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
             <Rectangle.Triggers>
-                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
@@ -85,7 +107,7 @@
         </Rectangle>
         <Image x:Name="BingoBkgrnd" Height="796" Canvas.Left="282" Canvas.Top="-14" Width="796" Source="/BINGO.png" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Opacity="0.4">
             <Image.Triggers>
-                <EventTrigger RoutedEvent="Image.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="Opacity"
@@ -101,12 +123,8 @@
                 Height="235" FontSize="40" FontFamily="Segoe UI Black"
                 VerticalAlignment="Top" Click="BtnGenerar_Click" MouseEnter="BtnGenerar_Encima" Canvas.Top="392" HorizontalAlignment="Left"
                 Width="394" Canvas.Left="-36">
-            <StackPanel>
-                <TextBlock Text="Generar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="números" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
             <Button.Triggers>
-                <EventTrigger RoutedEvent="Button.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -119,13 +137,17 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Button.Triggers>
+            <StackPanel>
+                <TextBlock Text="Generar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="números" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
         </Button>
         <TextBox x:Name="NB1" Background="#09269b" Height="66" Width="67" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True" Canvas.Left="310" Canvas.Top="485" FontSize="40" BorderBrush="White" BorderThickness="4" Foreground="White" TextAlignment="Center">
             <TextBox.RenderTransform>
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -141,7 +163,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -157,7 +179,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -173,7 +195,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -189,7 +211,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -205,7 +227,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -221,7 +243,7 @@
                 <RotateTransform Angle="0"/>
             </TextBox.RenderTransform>
             <TextBox.Triggers>
-                <EventTrigger RoutedEvent="TextBox.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -238,28 +260,18 @@
                 Canvas.Left="982" Canvas.Top="200"
                 HorizontalAlignment="Center" VerticalAlignment="Top">
             <Border.Triggers>
-                <EventTrigger RoutedEvent="Border.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </Border.Triggers>
         </Border>
-        <!--<WrapPanel Height="502" Width="504"
-           Canvas.Left="1260" Canvas.Top="32"
-           HorizontalAlignment="Center" VerticalAlignment="Top"
-           Background="#8fcef2">
-            <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
-                    <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
-                </EventTrigger>
-            </WrapPanel.Triggers>
-        </WrapPanel>-->
         <!--FilaA-->
         <WrapPanel x:Name="A1" Background="White" Height="51" Width="53" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="1003" Canvas.Top="230">
             <WrapPanel.RenderTransform>
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -269,7 +281,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -279,7 +291,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -289,7 +301,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -300,7 +312,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -310,7 +322,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -320,7 +332,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -330,7 +342,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -341,7 +353,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -351,7 +363,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -361,7 +373,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -371,7 +383,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -382,7 +394,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -392,7 +404,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -402,7 +414,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -412,7 +424,7 @@
                 <RotateTransform Angle="0" />
             </WrapPanel.RenderTransform>
             <WrapPanel.Triggers>
-                <EventTrigger RoutedEvent="WrapPanel.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource Aparecer}"/>
                 </EventTrigger>
             </WrapPanel.Triggers>
@@ -426,12 +438,8 @@
                 Height="242" Width="394"
                 HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Click="BtnAlfGenerar_Click" MouseEnter="BtnGenerar_Encima">
-            <StackPanel>
-                <TextBlock Text="Generar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="letras" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
             <Button.Triggers>
-                <EventTrigger RoutedEvent="Button.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
@@ -444,11 +452,15 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Button.Triggers>
+            <StackPanel>
+                <TextBlock Text="Generar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="letras" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
         </Button>
         <Image x:Name="CallerImg" Height="148" Canvas.Left="10" Canvas.Top="610" Width="424"
                Source="/Caller.png" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Image.Triggers>
-                <EventTrigger RoutedEvent="Image.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
@@ -462,7 +474,7 @@
         <Image x:Name="UsuarioImg" Height="148" Canvas.Left="926" Width="424"
                Source="/Usuario.png" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image.Triggers>
-                <EventTrigger RoutedEvent="Image.Loaded">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
@@ -472,8 +484,18 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Image.Triggers>
-        </Image >
-        <Image Height="185" Width="188" Source="/UPN.png" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="10" Canvas.Left="10"/>
+        </Image>
+        <Image Height="185" Width="188" Source="/UPN.png" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="10" Canvas.Left="10">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="White" BlurRadius="30" Direction="340" ShadowDepth="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Image.Style>
+        </Image>
         <TextBox x:Name="ListaDeNumeros" Canvas.Left="439" IsReadOnly="True"
                  Text="" FontSize="35" FontFamily="Segoe UI Black"
                  Canvas.Top="666" 
@@ -483,7 +505,7 @@
                  TextWrapping="NoWrap"/>
         <Label Content="Lista de números que se generó:"
                Canvas.Left="447" Canvas.Top="588"
-               FontSize="50" FontFamily="Forte" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+               FontSize="50" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="A1Btn" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="1003" Canvas.Top="230" Width="53" Height="51"
                 Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf"
                 IsEnabled="False">
@@ -576,14 +598,15 @@
             </StackPanel>
         </Button>
         <Button x:Name="D4Btn" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Left="1229" Canvas.Top="444" Width="53" Height="50"
-                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf">
+                Background="Transparent" BorderBrush="Red" Opacity="0" Click="MarcarX" MouseEnter="BotonEncimaAlf" MouseLeave="BotonLeaveAlf"
+                IsEnabled="False">
             <StackPanel>
                 <Image Source="/X.png" Opacity="0"/>
             </StackPanel>
         </Button>
-        <Image x:Name="IMGConversion" Height="210" Canvas.Left="697" Canvas.Top="-228" Width="233" Source="/conversionbinaria.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="1">
+        <Image x:Name="IMGConversion" Height="210" Canvas.Left="537" Canvas.Top="-228" Width="233" Source="/conversionbinaria.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="1">
             <Image.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="Height"
@@ -595,7 +618,7 @@
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="Height"
@@ -609,9 +632,9 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
-        <Image x:Name="IMGTabla" Height="289" Canvas.Left="447" Canvas.Top="-308" Width="215" Source="/tablaASCII.jpg" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Image x:Name="IMGTabla" Height="289" Canvas.Left="207" Canvas.Top="-308" Width="215" Source="/tablaASCII.jpg" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Image.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="Height"
@@ -623,7 +646,7 @@
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
                             <DoubleAnimation Storyboard.TargetProperty="Height"
@@ -637,8 +660,34 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
-        <Image x:Name="IMGBINGO" gif:ImageBehavior.AnimatedSource="/BINGOWIN.gif" Canvas.Left="-963" Canvas.Top="-325" Height="520" Width="766" HorizontalAlignment="Left" VerticalAlignment="Top">
-            
-        </Image>
+        <Image x:Name="IMGBINGO" gif:ImageBehavior.AnimatedSource="/BINGOWIN.gif" Canvas.Left="-963" Canvas.Top="-325" Height="520" Width="766" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <WrapPanel x:Name="Bloqueador" Width="1360" Height="768"/>
+        <Button x:Name="BtnVolver" Width="302" Height="162" Canvas.Left="56" Canvas.Top="782" 
+                Content="Volver" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed"
+                Background="Azure"
+                Click="BtnVolver_Click" MouseEnter="BtnGenerar_Encima">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Path x:Name="Estilosexo" Fill="#a92e68" Stroke="#a92e45"
+                              Data="m 41,81
+                                    l 60, -80
+                                    l 0, 40
+                                    l 180, -20
+                                    l 0, 120
+                                    l -180, -20
+                                    l 0, 40
+                                    l -60, -80"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Estilosexo" Property="Fill" Value="Red"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Canvas>
 </Window>

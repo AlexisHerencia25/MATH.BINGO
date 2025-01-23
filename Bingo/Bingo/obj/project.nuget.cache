@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+PN+732z6g4=",
+  "dgSpecHash": "dBwy06Lha48=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexis\\Desktop\\MATH.BINGO\\Bingo\\Bingo\\Bingo.csproj",
+  "projectFilePath": "C:\\Users\\Alexis\\Desktop\\Practicas\\MATH.BINGO-main\\Bingo\\Bingo\\Bingo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.122\\microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
