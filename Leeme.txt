@@ -1,0 +1,34 @@
+-BINGO BINARIO- (Creado con: VS2022 WPF)
+
+*Por favor cambiar la resolución de su monitor a 1366x768*
+
+Trabajo grupal: Matematica Discreta (2024-1)
+El siguiente programa fue creado en base a un proyecto solicitado de la Universidad Privada del
+Norte con la finalidad de crear una solución hacia la problematica de las personas analfabeticas en
+zonas rudimentarias. Se tuvo como idea realizar un bingo que promueve la comprensión hacia las letras
+del alfabeto convertidas de numeros ASCII a binarios (el uso del programa debe requerir que cada uno
+tenga su programa en su ordenador).
+
+**Se tuvo en mente principalmente hacer 2 programas que se conecten entre si (Caller y Usuario)
+pero se requirio combinar los 2 en 1**
+
+Opcion de Caller: Es la persona que generará los numeros binarios dandole click a ´Generar números´,
+postreriormente se generará un numero binario con un intervalo del 65 al 90 y se almacenará en una
+lista, el caller dictará el número en binario a los usuarios en donde ellos tendran que realizar la
+respectiva conversion.
+
+Opcion de Usuario: Jugador que tendrá que presionar ´Generar letras´ en donde se le generará
+aleatoriamente letras del alfabeto y posteriormente se desplazará imagenes para que puedan realizar
+las conversión del numero binario a decimal y de decimal a ASCII para determinar si tienen la letra
+en su cartilla en donde podra marcar dandole click a la letra en su cartilla.
+
+Una vez se marquen todas las casillas saldrá un mensaje de felicidades y el tiempo transcurrido.
+
+Opcionalmente hay otro minijuego de completar la oración en donde se genera aleatoriamente una
+oración en donde el usuario debe determinar que decimal convertido a ASCII le corresponde llenar en
+la casilla, se les puede dar como pista algunas casillas ya completadas pero tienen que estar
+correctamente escritas para posteriormente iniciar con la corrección con el boton 'Verificar'.
+
+
+
+Espero que el programa sea de su agrado.
